@@ -12,7 +12,7 @@
     <meta name="msapplication-TileImage" content="content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png">
     <meta name="msapplication-TileColor" content="#9ec25e">
     <meta name="theme-color" content="#9ec25e">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/jquery.sidr.light.css"/>
     <link rel="stylesheet" href="css/animate.min.css"/>
