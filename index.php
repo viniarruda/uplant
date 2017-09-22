@@ -2,7 +2,7 @@
 <?php include "componentes/header.php";?>
     <?php
         if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
-           ?> <script> $('.btn-login').css('display', 'inline-block');</script> <?php
+           ?> <script> $('.btn-login').css('display', 'initial');</script> <?php
         } else {
     ?>
     <script>
