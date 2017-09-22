@@ -8,8 +8,8 @@
     <script>
        $('.btn-login').css('display', 'none');
        $('.btn-cadastro').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
-       $('.btn-logout').css('display', 'inline-block');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');
     </script>
     <?php } ?>
 <div id="home-slider">
