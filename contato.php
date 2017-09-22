@@ -36,6 +36,19 @@
         <div class="sidebar grid_4">
             <div class="box-gray">
                 <h3 class="title-box">Nossas informações</h3>
+                <p class="rs description pb20">Essas são algumas das dúvidas mais frequentes.</p>
+                <p class="rs pb20">
+                    <span class="fw-b">O que é o Uplant?</span>:A Uplant é uma plataforma 100% digital de investimentos coletivos, permitindo que pequenos e médios agricultores possam procurar investimentos de uma forma simples e eficaz e o investidor possa diversificar sua carteira.
+                </p>
+                <p class="rs pb20">
+                    <span class="fw-b">O que é crownfunding?</span>: Crownfunding ou investimento coletivo, é uma forma de arrecadação de dinheiro, através da internet, para projetos de todo o tipo, seja ele: pequenos negócios, invenções, ONGs, filantropia, entre outros.
+                </p>
+                <p class="rs pb20">
+                    <span class="fw-b">E-mail</span>: <a href="mailto:contato@uplant.com.br" class="be-fc-orange">contato@uplant.com.br</a>
+                </p>
+            </div>
+             <div class="box-gray">
+                <h3 class="title-box">FAQ</h3>
                 <p class="rs description pb20">Caso queira tirar alguma dúvida por telefone ou pessoalmente, ligue para nós diretamente e agende uma conversa com um dos nossos representantes.</p>
                 <p class="rs pb20">
                     <span class="fw-b">Endereço</span>: Av. Lins de Vasconcelos, 1222
