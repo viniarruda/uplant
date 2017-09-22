@@ -1,31 +1,31 @@
 var CACHE_NAME = 'uplant-v1';
 
-self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      return cache.addAll([
-        '/',
-        '/index.php',
-        '/manifest.js',
-        '/cadastrar.php',
-        '/config.php',
-        '/contato.php',
-        '/enviarInvestimento.php',
-        '/investimentos.php',
-        '/investir.js',
-        '/login.php',
-        '/logout.php',
-        '/perfilAdmin.php',
-        '/perfilUsuario.php',
-        '/project.php',
-        '/scripts.php',
-        '/user-authentication.php',
-        '/css/*',
-        '/js/*',
-      ]);
-    })
-  )
-});
+// self.addEventListener('install', function (event) {
+//   event.waitUntil(
+//     caches.open(CACHE_NAME).then(function (cache) {
+//       return cache.addAll([
+//         '/',
+//         '/index.php',
+//         '/manifest.js',
+//         '/cadastrar.php',
+//         '/config.php',
+//         '/contato.php',
+//         '/enviarInvestimento.php',
+//         '/investimentos.php',
+//         '/investir.js',
+//         '/login.php',
+//         '/logout.php',
+//         '/perfilAdmin.php',
+//         '/perfilUsuario.php',
+//         '/project.php',
+//         '/scripts.php',
+//         '/user-authentication.php',
+//         '/css/*',
+//         '/js/*',
+//       ]);
+//     })
+//   )
+// });
 
 self.addEventListener('activate', function activator(event) {
   event.waitUntil(
