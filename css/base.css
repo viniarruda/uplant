@@ -1,0 +1,94 @@
+#header .txt-message {
+  margin: 0 0 0 10px;
+}
+#header .txt-message.btn-login {
+    color: #fff;
+    border: 2px solid #92999d;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #92999d;
+}
+#header .txt-message.btn-cadastro {
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3CB371;
+}
+#header .txt-message.btn-login:hover {
+  background-color: #3e4b51;
+  color: #92999d;
+  border-color: #3e4b51;
+}
+#sobre {
+  background: #f0f0f0;
+  padding: 50px 0;
+  display: block;
+}
+#sobre h1 {
+  text-align: center;
+}
+#sobre .grid_sobre {
+  text-align: center;
+}
+#sobre .icon_sobre {
+  border: 8px solid #006600;
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 100px;
+  padding: 50px;
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  position: relative;
+  background-color: #00b200;
+}
+#sobre .icon_sobre:hover {
+  top: -10px;
+}
+#sobre .icon_sobre .fa {
+  font-size: 45px;
+  color: #006600;
+}
+#sobre .icon_sobre .fa-money {
+  color: green;
+}
+span.social-header {
+  color: #92999d;
+  margin: 0 0 0 10px;
+}
+span.social-header:hover {
+  color: #fff;
+}
+.social-last {
+  margin-right: 25px;
+}
+.fa-menu-top {
+  margin-right: 3px;
+}
+#footer .site-copyright span {
+  margin-right: 25px;
+}
+.container-login {
+  background-color: #f0f0f0;
+  padding-top: 45px;
+}
+.login-form {
+  width: 400px;
+  margin: 0 auto;
+}
+.ok {
+  text-align: center;
+  color: #ff0000;
+}
+#header span.txt-message.btn-perfil {
+  display: none;
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3CB371;
+}
+#header span.txt-message.btn-perfil:hover {
+  background-color:#4ba220;
+}

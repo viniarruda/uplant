@@ -1,0 +1,90 @@
+{
+    "name": "Uplant",
+    "short_name": "Uplant",
+    "theme_color": "#9ec25e",
+    "background_color": "#fff",
+    "display": "standalone",
+    "start_url": "/?utm_source=homescreen",
+    "icons": [
+        {
+            "src": "content/images/987795a6-9046-0fa2-b9ad-9b0f34d2c4b2.webPlatform.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/d969a624-2a74-ec1b-2633-2764725f0baf.webPlatform.png",
+            "sizes": "1240x600",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/c7fee462-bf1e-ada9-33e8-028707ace776.webPlatform.png",
+            "sizes": "300x300",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/b7fbc104-9de0-a145-2e7a-304ea2008568.webPlatform.png",
+            "sizes": "88x88",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/6a0e8145-8662-a14b-2df0-b916ff854e18.webPlatform.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/805824d8-dc29-80e8-6438-f4a8af9c3725.webPlatform.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/cc1e285a-526c-5a21-6a28-40c5ec5179ff.webPlatform.png",
+            "sizes": "620x300",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/1d196ecd-9cc2-5829-7325-9302518cbe88.webPlatform.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/70289a28-c114-f975-657c-6e1b1cf22578.webPlatform.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/263b2169-9776-cbc9-5875-afeae93fb1db.webPlatform.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/8fcb4853-79c8-59ed-84ea-ae0fc544c274.webPlatform.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/af8ab430-0ad9-3d9b-f406-207ab31aa885.webPlatform.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/41ce0a81-a063-ce4e-6b2a-105534b382dc.webPlatform.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/fa86b201-67fe-dc90-10c7-d37947b69b51.webPlatform.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "content/images/576b604e-988f-cdf4-ec68-e447af2ec748.webPlatform.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+Links úteis:
+
+
+http://www.devmedia.com.br/criando-um-cadastro-com-php-ajax-e-jquery/28046
+
+http://www.devmedia.com.br/criando-um-sistema-de-cadastro-e-login-com-php-e-mysql/37213

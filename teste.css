@@ -1,0 +1,17 @@
+#header span.txt-message.btn-perfil, #header span.txt-message.btn-logout {
+  display: none;
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3CB371;
+}
+#header span.txt-message.btn-perfil:hover {
+  background-color:#4ba220;
+}
+#header span.txt-message.btn-logout {
+	background-color: red;
+}
+.site-copyright {
+	margin-right: 15px;	
+}
