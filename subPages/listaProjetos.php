@@ -25,56 +25,62 @@
         if (empty($numero_investidores)) {
             $numero_investidores = "Seja o primeiro";
         }
-        $porcentagem = ($total_arrecadado/$valorInvestimento) *100;
+        if ($valorInvestimento == 0) 
+            $porcentagem = 0;
+        else
+            $porcentagem = ($total_arrecadado/$valorInvestimento) *100;
 
 ?>
-        <div class="project-short larger">
+    <div class="grid_3">
+        <div class="project-short sml-thumb">
             <div class="top-project-info">
                 <div class="content-info-short clearfix">
                     <a href="#" class="thumb-img">
                         <img src="content/images/plantacaoInvestimentos/<?php echo $thumb_plantacao; ?>.jpg" alt="$TITLE">
                     </a>
                     <div class="wrap-short-detail">
-                        <h3 class="rs acticle-title">
-                           <a class="be-fc-orange" href="#">Banana</a>
-                        </h3>
-                        <p class="rs tiny-desc">por <a href="#" class="fw-b fc-gray be-fc-orange"><?php echo $nome_agricultor; ?></a></p>
+                        <h3 class="rs acticle-title"><?php echo $nome_plantacao; ?></h3>
+                        <p class="rs tiny-desc">por <?php echo $nome_agricultor; ?></p>
                         <p class="rs title-description"><?php echo $resumo; ?></p>
+                        
                     </div>
                 </div>
-            </div><!--end: .top-project-info -->
+            </div>
             <div class="bottom-project-info clearfix">
-                <div class="project-progress sys_circle_progress" data-percent="<?php print number_format($porcentagem,1); ?>">
-                    <div class="sys_holder_sector"></div>
+                <div class="line-progress">
+                    <div class="bg-progress">
+                        <span  style="width: <?php print number_format($porcentagem,1); ?>%"></span>
+                    </div>
                 </div>
                 <div class="group-fee clearfix">
-                    <div class="fee-item">
+                    <div class="fee-item" >
                         <p class="rs lbl">Investidores</p>
                         <span class="val"><?php echo $numero_investidores; ?></span>
                     </div>
+                    <div class="clear"></div>
                     <div class="sep"></div>
-                    <div class="fee-item">
+                    <div class="fee-item" style="margin-left: -15px;">
                         <p class="rs lbl">Verba Necessária</p>
                         <span class="val">R$<?php echo $valorInvestimento; ?></span>
                     </div>
+                    <div class="clear"></div>
                     <div class="sep"></div>
-                    <div class="fee-item">
+                    <div class="fee-item" style="margin-left: -15px;">
                         <p class="rs lbl">Termina em</p>
-                        <span class="val"> <?php echo $total_dias; ?> dias</span>
+                        <span class="val"><?php echo $total_dias; ?> dias</span>
                     </div>
+                    <div class="sep"></div>
+                    <div class="clear"></div>
+                    <form name="visualizarInvestimento" action="project.php?tmpId=<?php echo $id_investimento; ?>" method="POST" enctype="multipart/form-data">
+                        <input type="hidden"  name="id_investimento"  value="<?php echo $id_investimento; ?>"/>
+                        <input style="width: 100%; " type="submit" value="Invista" class="btn btn-red"/>
+                    </form>
                 </div>
-                <form name="visualizarInvestimento" action="project.php?tmpId=<?php echo $id_investimento; ?>" method="POST" enctype="multipart/form-data">
-                    <input type="hidden"  name="id_investimento"  value="<?php echo $id_investimento; ?>"/>
-                    <input class="btn btn-red btn-buck-project" type="submit" value="Invista" class="btn btn-red"/>
-                </form>
-                <div class="clear"></div>
             </div>
-        </div><!--end: project-short item -->
-
-
-
+        </div>
+    </div>
+    <div class="clear clear-2col"></div>
 <?php
         }
     }
 ?>
-</div>

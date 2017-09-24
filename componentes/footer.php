@@ -1,14 +1,14 @@
 <?php
 
-     $hostname_config = "localhost";
-     $database_config = "uplant";
-     $username_config = "root";
-     $password_config = "";
+     // $hostname_config = "localhost";
+     // $database_config = "uplant";
+     // $username_config = "root";
+     // $password_config = "";
 
-      // $hostname_config = "mysql552.umbler.com";
- 	  // $database_config = "uplant";
- 	  // $username_config = "uplant_adm";
- 	  // $password_config = "uplant#17";
+    $hostname_config = "mysql552.umbler.com";
+ 	$database_config = "uplant";
+ 	$username_config = "uplant_adm";
+ 	$password_config = "uplant#17";
 
 
     $conexao = mysqli_connect("$hostname_config","$username_config","$password_config","$database_config")
@@ -45,13 +45,13 @@
 } ?>
 
 <footer id="footer">
-    <div class="container_12 main-footer">
-        <div class="grid_3 about-us">
+<div class="container_12 main-footer">
+        <div class="grid_12 about-us" style="margin-bottom: 30px">
             <h3 class="rs title">Uplant</h3>
             <p class="rs description">Startup brasileira focada em investimento Crowndfounding agropecuário. </p>
             <p class="rs email"><a class="fc-default  be-fc-orange" href="mailto:info@megadrupal.com">contato@uplant.com.br</a></p>
             <p class="rs">+55 11 1234-5678</p>
-        </div><!--end: .contact-info -->
+        </div>
         <div class="clear clear-2col"></div>
         <div class="grid_3 email-newsletter">
             <h3 class="rs title">Newsletter</h3>
@@ -84,20 +84,17 @@
                 <div class="clear"></div>
             </div>
         </div>
-        <div class="clear"></div>
-    </div>
     <div class="copyright">
         <div class="container_12">
             <div class="grid_12">
-                <a class="logo-footer" href="index.php"><img src="content/images/up-logo-header.png" alt="Logo Uplant"/></a>
+                <p class="rs ta-c fc-gray-dark " style="text-align: left">Uplant - todos os direitos reservados. 2017® </p>
                 <p class="rs term-privacy">
-                    <a class="fw-b be-fc-orange" href="single.html">Termos e Condições</a>
+                    <a class="fw-b be-fc-orange" href="TermosUso.html">Termos e Condições</a>
                     <span class="sep">/</span>
-                    <a class="fw-b be-fc-orange" href="single.html">Política de privacidade</a>
+                    <a class="fw-b be-fc-orange" href="politicaPrivacidade.html">Política de privacidade</a>
                     <span class="sep">/</span>
                     <a class="fw-b be-fc-orange" href="#">FAQ</a>
                 </p>
-                <p class="rs ta-c fc-gray-dark site-copyright">Uplant - todos os direitos reservados. 2017 ® </p>
             </div>
             <div class="clear"></div>
         </div>
@@ -105,10 +102,30 @@
 </footer><!--end: #footer -->
 
 </div>
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<script type='text/javascript'>
-(function(){ var widget_id = '60BwCht1zn';var d=document;var w=window;function l(){
-var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
-<!-- {/literal} END JIVOSITE CODE -->
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function () {
+        console.log('service worker registered');
+      })
+      .catch(function () {
+        console.warn('service worker failed');
+      });
+  }
+</script>
+<script>
+$(function() {
+    $("#calendario").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+        dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+        dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+        monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+    });
+});
+</script>
+
 </body>
 </html>

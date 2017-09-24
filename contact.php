@@ -10,15 +10,15 @@
                             <div class="form form-post-comment">
                                 <div class="left-input">
                                     <label for="txt_name_contact">
-                                        <input id="txt_name_contact" type="text" name="nomeContato" class="txt fill-width txt-name" placeholder="Digite seu nome"/>
+                                        <input id="txt_name_contact" type="text" name="name" class="txt fill-width txt-name" placeholder="Digite seu nome"/>
                                     </label>
                                     <label for="txt_email_contact">
-                                        <input id="txt_email_contact" type="email" name="emailContato" class="txt fill-width txt-email" placeholder="Digite seu e-mail"/>
+                                        <input id="txt_email_contact" type="email" name="email" class="txt fill-width txt-email" placeholder="Digite seu e-mail"/>
                                     </label>
                                 </div>
                                 <div class="right-input">
                                     <label for="txt_content_contact">
-                                        <textarea name="mensagem" id="txt_content_contact" cols="30" rows="10" class="txt fill-width" placeholder="Digite sua mensagem"></textarea>
+                                        <textarea name="message" id="txt_content_contact" cols="30" rows="10" class="txt fill-width" placeholder="Digite sua mensagem"></textarea>
                                     </label>
                                 </div>
                                 <div class="clear"></div>

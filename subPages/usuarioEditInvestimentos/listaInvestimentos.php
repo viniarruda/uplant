@@ -30,7 +30,7 @@
 
     }
     
-    $investimento_query = "SELECT id, nome_plantacao, nome_agricultor, texto, thumb_plantacao, numero_investidores, total_arrecadado FROM investimento ORDER BY id asc";
+    $investimento_query = "SELECT id, nome_plantacao, nome_agricultor, texto, thumb_plantacao, numero_investidores, total_arrecadado FROM investimento ORDER BY id desc";
     $resultado_query = mysqli_query($conexao,$investimento_query)
                         or die (mysqli_error());
 
@@ -53,27 +53,9 @@
 
 
 <div class="box-list-comment">
-        <div class="media comment-item">
-            <a href="#" class="thumb-left">
-                <img src="content/images/plantacaoInvestimentos/<?php echo $thumb_plantacao; ?>.jpg" alt="$TITLE">
-            </a>
-            <div class="media-body">
                     <h4 class="rs comment-author">
-                        <a href="#" class="be-fc-orange fw-b"><?php echo $nome_plantacao; ?></a>
-                        <span class="fc-gray">por:</span>
-                    </h4>
-                    <p class="rs comment-content"><?php echo $nome_agricultor; ?></p>
-                    <form name="editarPost" method="POST"  enctype="multipart/form-data">
-                        <input type="hidden" name="id_investimento_editar" value="<?php echo $id_investimento; ?>"/>
-                        <input type="hidden" name="idInvestimentoEditar" value="editar" />
-                        <input  id="btnEditar"  type="button" name="editar_investimento" value="Editar" class="btn btn-red"/>
-                    </form>
-                    <form name="excluirInvestimento" action="" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="id_investimento_excluir" value="<?php echo $id_investimento; ?>"/>
-                        <input type="hidden" name="excluir_investimento" value="excluir" />
-                        <input type="submit" name="excluir" value="Excluir" class="btn btn-red"/>
-                    </form>
-            </div>
+                        <span class="fc-gray">Nenhum investimento encontrado</span>
+                    </h4>     
 
         </div>
 </div>

@@ -147,6 +147,7 @@
         padding-top: 40px;
     }
 }
+
 @media screen and (max-device-width:  767px), screen and (max-width:  767px) {
 
     .layout-2cols .content,

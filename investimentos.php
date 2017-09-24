@@ -7,16 +7,13 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-cadastro').css('display', 'none');
        $('.btn-perfil').css('display', 'inline-block');
-       $('.btn-logout').css('display', 'inline-block');
     </script>
     <?php } ?>
     <div class="container_12">
-        <div class="content grid_9">
             <div class="search-result-page">
                 <div class="top-lbl-val">
-                    <h2 class="common-title"><span class="fc-orange">Investimentos</span></h2>
+                    <h2 class="common-title">Investimentos</h2>
                     <div class="count-result">
                         <span class="fw-b fc-black">
                         <?php 
@@ -36,17 +33,15 @@
                         </span> projetos abertos
                     </div>
                 </div>
-                <div class="list-project-in-category">
-                        <div id="list-search-ajax" class="list-project-result">
+                 <div class="lst-popular-project clearfix">
+                    
                             <?php include "subPages/listaProjetos.php"; ?>
+                            
+
                         </div>    
                         <div class="clear"></div>
                     </div>
-                </div><!--end: .list-project-in-category -->
-                <!-- <p class="rs ta-c">
-                    <a id="showmoreproject" class="btn btn-black btn-load-more" href="#">Show more projects</a>
-                </p> -->
-            </div><!--end: .search-result-page -->
+                </div>
         </div><!--end: .content -->
         <div class="clear"></div>
     </div>

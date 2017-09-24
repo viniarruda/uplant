@@ -6,11 +6,14 @@
             setTimeout("window.location='login.php'", 100);
         }
     </script>
+
     <?php  
+        
+
         if (isset($_GET['tmpId'])){
             $tmpId = $_GET['tmpId'];
             $tmpId = intval($tmpId);
-            $investimento_query = "SELECT   ValorInvestimento, total_arrecadado, id FROM investimento where id = $tmpId";
+            $investimento_query = "SELECT   ValorInvestimento, total_arrecadado, id, nome_agricultor, nome_plantacao, txt_resumo, valorInvestimento FROM investimento where id = $tmpId";
             $resultado_query = mysqli_query($conexao, $investimento_query)
                                 or die (mysqli_error());
 
@@ -18,14 +21,27 @@
             $valorInvestimento = $fetch[0];
             $valor_investido = $fetch[1];
             $id = $fetch[2];
+            $nome = $fetch[3];
+            $nomeProjeto = $fetch[4];
+            $resumo = $fetch[5];
+            $valor = $fetch[6];
 
 
-            $valMin = intval($valorInvestimento)*0.1;
+            $valMin = 1000;
             $valorRestante = intval($valorInvestimento) - intval($valor_investido);
 
             if ($valMin >= $valorRestante) {
                 $valMin = $valorRestante;
             }
+
+            $mail = $_SESSION["email"];
+            $mail_query = "SELECT id FROM users where email = '$mail'";
+            $resultado_queryUser = mysqli_query($conexao, $mail_query)
+                                or die (mysqli_error());
+            $fetchUser = mysqli_fetch_array($resultado_queryUser);
+            $idUser = $fetchUser[0];
+
+
         }
         else
             $tmpId = null;
@@ -38,9 +54,7 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-cadastro').css('display', 'none');
        $('.btn-perfil').css('display', 'inline-block');
-       $('.btn-logout').css('display', 'inline-block');
     </script>
     <div class="layout-2cols">
         <div class="content grid_8">
@@ -48,13 +62,8 @@
                 <div class="wrapper-box box-post-comment">
                     <h2 class="common-title">Formulário de investimento</h2>
                     <div class="box-white">
-                        <form id="contact-form" class="clearfix" action="scripts/mail/sendmailInvestir.php?tmpId=<?php echo $id  ?>" method="POST">
+                        <form id="contact-form" class="clearfix" action="scripts/mail/sendmailInvestir.php?tmpId=<?php echo $id  ?>&tmpIdU=<?php echo $idUser; ?>" method="POST">
                             <div class="form form-post-comment">
-                                <div class="row-item clearfix">
-                                    <label for="txt_email_contact">
-                                        <input id="txt_email_contact" type="email" name="email" class="txt fill-width txt-email" placeholder="Insira seu e-mail"/>
-                                    </label>
-                                </div>
                                 <p class="rs pb30">Você pode investir ainda R$<?php echo number_format($valMin, 2, ',', '.'); ?> ou R$<?php echo number_format($valorRestante, 2, ',', '.');  ?> </p>
                                 <div class="row-item clearfix">
                                     <label for="txt_valor_contact">
@@ -67,20 +76,15 @@
                                     </label>
                                 </div>
                                 <div class="row-item clearfix">
-                                    <label class="lbl" for="">Imagem do comprovante:</label>
-                                    <div class="val">
-                                        <input type="file" name="arquivo" accept="image/jpeg">
-                                    </div>
                                 </div>
-                                <p class="rs pb30">Após aprovação da transferência, notificaremos você por e-mail dizendo que seu investimento foi aprovado.</p>
+                                <p class="rs pb30">Enviaremos um e-mail aguardando sua nota de pagamento.</p>
                                 <div class="clear"></div>
 
                                 <p class="rs ta-r clearfix">
 									<span id="response"></span>
                                   
                                         <input type="submit" class="btn btn-white btn-submit-comment" value="Enviar">
-                                    
-                                   
+                                                                       
                                </p>
                             </div>
                         </form>
@@ -89,6 +93,22 @@
             </div>
         </div><!--end: .content -->
         <div class="sidebar grid_4">
+            <div class="box-gray">
+                    <h2 class="title-box">Projeto</h2>
+                    <div class="media">
+                        <!-- <a class="thumb-left">
+                            <img style="max-width: 10%;" src="content/images/plantacaoInvestimentos/<?php echo $tmpId?>.jpg" alt=""/>
+                        </a> -->
+                        <div class="media-body">
+                            <h4 class="rs "><a href="#" class="be-fc-orange fw-b"><?php echo $nomeProjeto ?></a></h4>
+                            <p class="rs pb10" >por <?php echo $nome ?></p>
+                            <a class="thumb-left pb10">
+                                <img  src="content/images/plantacaoInvestimentos/<?php echo $tmpId?>.jpg" alt=""/>
+                            </a>
+                            <p class="rs"> <?php echo $resumo ?></p>
+                        </div>
+                    </div>
+            </div>
             <div class="box-gray">
                 <h3 class="title-box">Contato direto</h3>
                 <p class="rs description pb20">Caso queira tirar alguma dúvida por telefone ou pessoalmente, ligue para nós diretamente e agende uma conversa com um dos nossos representantes.</p>

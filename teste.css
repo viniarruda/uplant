@@ -1,4 +1,4 @@
-#header span.txt-message.btn-perfil, #header span.txt-message.btn-logout {
+#header span.txt-message.btn-perfil {
   display: none;
   color: #fff;
   border: 2px solid #92999d;
@@ -8,6 +8,7 @@
 }
 #header span.txt-message.btn-perfil:hover {
   background-color:#4ba220;
+<<<<<<< HEAD
 }
 #header span.txt-message.btn-logout {
 	background-color: red;
@@ -17,4 +18,6 @@
 }
 .wrapper-box .card-equipe {
 	width: 200px;
+=======
+>>>>>>> 0898db926f811bf800f451f7f2fc7481e17e9bb9
 }

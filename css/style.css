@@ -1959,8 +1959,9 @@ a.fc-gray-dark,.fc-gray-dark{color: #999}
 }
 .box-post-comment .left-input label{
     display: block;
-    margin-top: 20px;
+    margin-top: -15px;
 }
+
 .box-post-comment .left-input label:first-child{
     margin-top: 0;
 }
