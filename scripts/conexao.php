@@ -1,19 +1,19 @@
 <?php
 
-	 $hostname_config = "localhost";
-	 $database_config = "uplant";
-	 $username_config = "root";
-	 $password_config = "";
+	// $hostname_config = "localhost";
+	// $database_config = "uplant";
+	// $username_config = "root";
+	// $password_config = "";
 
 	// $hostname_config = "mysql.hostinger.com.br";
 	// $database_config = "u538122687_up";
 	// $username_config = "u538122687_upadm";
 	// $password_config = "uplant#17";
 
-	 // $hostname_config = "mysql552.umbler.com";
-	 // $database_config = "uplant";
-	 // $username_config = "uplant_adm";
-	 // $password_config = "uplant#17";
+	  $hostname_config = "mysql552.umbler.com";
+	  $database_config = "uplant";
+	  $username_config = "uplant_adm";
+	  $password_config = "uplant#17";
 
 
 	$conexao = mysqli_connect("$hostname_config","$username_config","$password_config","$database_config")
