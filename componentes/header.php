@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/md-slider.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/equipe.css"/>
     <link rel="stylesheet" type="text/css" href="teste.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
@@ -53,9 +54,9 @@
                         <ul id="main-menu" class="nav nav-horizontal clearfix">
                             <li class="active"><a href="index.php"><i class="fa fa-home fa-menu-top"></i> Home</a></li>
                             <li class="sep"></li>
-                            <li><a href="#sobre"><i class="fa fa-info fa-menu-top"></i> Sobre</a></li>
+                            <li><a href="quemsomos.php"><i class="fa fa-info fa-menu-top"></i> Sobre</a></li>
                             <li class="sep"></li>
-                            <li><a href="how-it-work.html"><i class="fa fa-question fa-menu-top"></i> Ajuda</a></li>
+                            <li><a href="contato.php/"><i class="fa fa-question fa-menu-top"></i> Ajuda</a></li>
                             <li class="sep"></li>
                             <li><a href="contato.php"><i class="fa fa-envelope fa-menu-top"></i> Contato</a></li>
                         </ul>

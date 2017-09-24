@@ -1,0 +1,16 @@
+.title-equipe {
+	font-size: 22px;
+	font-weight: bold;
+}
+.card-equipe {
+	width: 180px;
+	display: inline-block;
+	margin: 5px;
+}
+.card-equipe img {
+	border-radius: 100%;
+	border: 2px solid #3CB371;
+}
+.card-equipe p {
+	text-align: center;
+}
