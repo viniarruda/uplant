@@ -7,7 +7,9 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
+       $('.btn-cadastro').css('display', 'none');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');
     </script>
     <?php } ?>
     <div class="container_12">
