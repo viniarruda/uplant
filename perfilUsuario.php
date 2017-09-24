@@ -62,7 +62,7 @@
 ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
+       $('.btn-perfil').css('display', 'initial');
     </script>
     <div class="layout-2cols">
         <div class="content grid_8">
@@ -168,9 +168,9 @@
                 <h3 class="title-box">Bem-Vindo</h3>
                 <div class="media">
                     <div class="media-body">
-                        <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php $nome_usuario ?></a></h4>
-                        <p class="rs">Chicago, IL</p>
-                        <p class="rs fc-gray">5 projects</p>
+                        <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nome_usuario ?></a></h4>
+                        <p class="rs"><?php echo $Cidade_usuario; ?></p>
+                        <p class="rs fc-gray"><?php echo $count?> projetos</p>
                     </div>
                 </div>
                 <div class="author-action">
