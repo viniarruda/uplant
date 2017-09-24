@@ -285,37 +285,4 @@
         </div>
     </div>
 </div><!--end: .home-popular-project -->
-<section id="sobre">
-  <div class="container_12">
-    <h1>Por que devo investir?</h1>
-    <div class="grid_4">
-      <div class="grid_sobre">
-        <div class="sobre-item">
-          <h2>Bom rendimento</h2>
-          <i class="fa fa-level-up"></i>
-        </div>
-        <p>Vestibulum tristique, purus eget euismod vulputate, nisl erat suscipit mi!</p>
-      </div>
-    </div>
-    <div class="grid_4">
-      <div class="grid_sobre">
-        <div class="sobre-item">
-          <h2>Bom rendimento</h2>
-          <i class="fa fa-money"></i>
-        </div>
-        <p>Vestibulum tristique, purus eget euismod vulputate, nisl erat suscipit mi!</p>
-      </div>
-    </div>
-    <div class="grid_4">
-      <div class="grid_sobre">
-        <div class="sobre-item">
-          <h2>Bom rendimento</h2>
-          <i class="fa fa-line-chart"></i>
-        </div>
-        <p>Vestibulum tristique, purus eget euismod vulputate, nisl erat suscipit mi!</p>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-</section>
 <?php include("componentes/footer.php") ?>

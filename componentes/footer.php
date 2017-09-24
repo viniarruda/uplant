@@ -1,14 +1,14 @@
 <?php
 
-    // $hostname_config = "localhost";
-    // $database_config = "uplant";
-    // $username_config = "root";
-    // $password_config = "";
+     $hostname_config = "localhost";
+     $database_config = "uplant";
+     $username_config = "root";
+     $password_config = "";
 
-    $hostname_config = "mysql552.umbler.com";
- 	  $database_config = "uplant";
- 	  $username_config = "uplant_adm";
- 	  $password_config = "uplant#17";
+      // $hostname_config = "mysql552.umbler.com";
+ 	  // $database_config = "uplant";
+ 	  // $username_config = "uplant_adm";
+ 	  // $password_config = "uplant#17";
 
 
     $conexao = mysqli_connect("$hostname_config","$username_config","$password_config","$database_config")
@@ -75,6 +75,11 @@
                     <li><a class="be-fc-orange" href="investimentos.php">Investimentos</a></li>
                     <li><a class="be-fc-orange" href="enviarInvestimento.php">Sou agricultor</a></li>
                     <li><a class="be-fc-orange" href="contato.php">Contato</a></li>
+                </ul>
+                <ul class="rs">
+                    <li><a class="be-fc-orange" href="#">Facebook</a></li>
+                    <li><a class="be-fc-orange" href="#">Youtube</a></li>
+                    <li><a class="be-fc-orange" href="mailto:contato@uplant.com.br">E-mail</a></li>
                 </ul>
                 <div class="clear"></div>
             </div>
