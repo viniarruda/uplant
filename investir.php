@@ -54,8 +54,9 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
-    </script>
+       $('.btn-cadastro').css('display', 'none');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');    </script>
     <div class="layout-2cols">
         <div class="content grid_8">
             <div class="single-page">

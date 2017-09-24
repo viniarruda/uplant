@@ -172,7 +172,7 @@
                     <div class="media-body">
                         <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nome_usuario ?></a></h4>
                         <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                        <p class="rs fc-gray"><?php echo $count?> projetos ?></p>
+                        <p class="rs fc-gray">projetos </p>
                     </div>
                 </div>
                 <div class="author-action">

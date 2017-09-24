@@ -56,6 +56,9 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
+       $('.btn-cadastro').css('display', 'none');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');
     </script>
     <?php } ?>
     <div class="layout-2cols">
