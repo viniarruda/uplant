@@ -1,32 +1,54 @@
  <?php session_start(); ?>
 <?php  
     include "componentes/header.php";?>
-<?php 
+    <?php 
 
-    if (isset($_GET['tmpId'])){
-        $tmpId = $_GET['tmpId'];
-        $investimento_query = "SELECT  nome_plantacao, nome_agricultor, texto, thumb_plantacao, numero_investidores, total_arrecadado, total_dias, valorInvestimento  FROM investimento where id = $tmpId ";
-        $resultado_query = mysqli_query($conexao,$investimento_query)
-                        or die (mysqli_error());
+        if (isset($_GET['tmpId'])){
+            $tmpId = $_GET['tmpId'];
+            $investimento_query = "SELECT  nome_plantacao, nome_agricultor, texto, thumb_plantacao, numero_investidores, total_arrecadado, total_dias, valorInvestimento, email_agricultor  FROM investimento where id = $tmpId ";
+            $resultado_query = mysqli_query($conexao,$investimento_query)
+                            or die (mysqli_error());
 
-        $fetch = mysqli_fetch_array($resultado_query);
+            $fetch = mysqli_fetch_array($resultado_query);
 
-        $nome_plantacao = $fetch[0];
-        $nome_agricultor = $fetch[1];
-        $texto = $fetch[2];
-        $thumb_plantacao = $fetch[3];
-        $numero_investidores = $fetch[4];
-        $total_arrecadado = $fetch[5];
-        $total_dias = $fetch[6];
-        $valorInvestimento = $fetch[7];
-        $porcentagem = ($total_arrecadado/$valorInvestimento) *100;
+            $nome_plantacao = $fetch[0];
+            $nome_agricultor = $fetch[1];
+            $texto = $fetch[2];
+            $thumb_plantacao = $fetch[3];
+            $numero_investidores = $fetch[4];
+            $total_arrecadado = $fetch[5];
+            $total_dias = $fetch[6];
+            $valorInvestimento = $fetch[7];
+            $emailAgricultor = $fetch[8];
+
+            if ($valorInvestimento == 0) 
+                $porcentagem = 0;
+            else
+                $porcentagem = ($total_arrecadado/$valorInvestimento) *100;
+
+            $investimento_queryUser = "SELECT name, email, Pais, UF, Cidade, Profissao, Empresa, Cargo, imagemPefil  FROM users where email = '$emailAgricultor' ";
+            $resultado_queryUser = mysqli_query($conexao, $investimento_queryUser)
+                            or die (mysqli_error());
+
+            $fetchUser = mysqli_fetch_array($resultado_queryUser);
+
+            $nomeAgricultor = $fetchUser[0];
+            $email = $fetchUser[1];
+            $pais = $fetchUser[2];
+            $UF = $fetchUser[3];
+            $cidade = $fetchUser[4];
+            $profissao = $fetchUser[5];
+            $empresa = $fetchUser[6];
+            $cargo = $fetchUser[7];
+            $imgPerfil = $fetchUser[8];
 
 
-    }
-    else
-        $tmpId = null;
+        }
+        else
+            $tmpId = null;
 
- ?>
+     ?>
+
     <?php
         if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
            ?> <script> $('.btn-login').css('display', 'inline-block');</script> <?php
@@ -34,16 +56,13 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-cadastro').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
-       $('.btn-logout').css('display', 'inline-block');
     </script>
     <?php } ?>
     <div class="layout-2cols">
         <div class="content grid_8">
             <div class="project-detail">
                 <h2 class="rs project-title"><?php echo  $nome_plantacao; ?></h2>
-                <p class="rs post-by">por <a href="#"><?php echo  $nome_agricultor; ?></a></p>
+                <p class="rs post-by">por <?php echo  $nomeAgricultor; ?></p>
                 <div class="project-short big-thumb">
                     <div class="top-project-info">
                         <div class="content-info-short clearfix">
@@ -51,7 +70,8 @@
                                 <img src="content/images/plantacaoInvestimentos/<?php echo $thumb_plantacao; ?>.jpg" alt="">
                             </div>
                         </div>
-                    </div><!--end: .top-project-info -->
+                    </div>
+
                     <div class="bottom-project-info clearfix">
                         <div class="project-progress sys_circle_progress" data-percent="<?php echo number_format($porcentagem, 1); ?>">
                             <div class="sys_holder_sector"></div>
@@ -59,7 +79,7 @@
                         <div class="group-fee clearfix">
                             <div class="fee-item">
                                 <p class="rs lbl">Investidores</p>
-                                <span class="val"><?php echo $numero_investidores ?></span>
+                                <span class="val"><?php if ($numero_investidores == 0) { echo "Invista!";} else echo $numero_investidores; ?></span>
                             </div>
                             <div class="sep"></div>
                             <div class="fee-item">
@@ -76,18 +96,17 @@
                     </div>
                 </div>
                 <div class="project-tab-detail tabbable accordion">
-                    <ul class="nav nav-tabs clearfix"><!-- 
-                      <li class="active"><a href="#">About</a></li> -->
-<!--                       <li><a href="#" class="be-fc-orange">Updates (0)</a></li>
-                      <li><a href="#" class="be-fc-orange">Backers (270)</a></li>
-                      <li><a href="#" class="be-fc-orange">Comments (2)</a></li> -->
+                    <ul class="nav nav-tabs clearfix">
+                      <li class="active"><a href="#">Descrição</a></li>
+                      <li><a href="#" class="be-fc-orange">Agricultor</a></li>
+                     <li><a href="#" class="be-fc-orange">Localização</a></li>
+                      <!--  <li><a href="#" class="be-fc-orange">Comments (2)</a></li> -->
                     </ul>
                     <div class="tab-content">
                         <div>
-                            <h3 class="rs alternate-tab accordion-label">Sobre</h3>
+                            <h3 class="rs alternate-tab accordion-label">Descrição</h3>
                             <div class="tab-pane active accordion-content">
                                 <div class="editor-content">
-                                    <h3 class="rs title-inside">Descrição sobre o projeto</h3>
                                     <p><?php echo $texto; ?><p>
                                     <div class="social-sharing">
                                         <!-- AddThis Button BEGIN -->
@@ -104,110 +123,33 @@
                             </div><!--end: .tab-pane(About) -->
                         </div>
                         <div>
-                            <h3 class="rs alternate-tab accordion-label">Updates (0)</h3>
+                            <h3 class="rs alternate-tab accordion-label">Agricultor</h3>
                             <div class="tab-pane accordion-content">
                                 <div class="tab-pane-inside">
                                     <div class="list-last-post">
                                         <div class="media other-post-item">
                                             <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-1.jpg" alt="$TITLE">
+                                                <img src="content/images/perfilUsuario/<?php echo $imgPerfil; ?>.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <h4 class="rs title-other-post">
-                                                    <a href="#" class="be-fc-orange fw-b">John Doe</a>
+                                                    <a href="#" class="be-fc-orange fw-b"><?php echo $nomeAgricultor; ?></a>
                                                 </h4>
-                                                <p class="rs fc-gray time-post pb10">posted 5 days ago</p>
-                                                <p class="rs description">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
+                                                <p class="rs fc-gray time-post pb10"></p>
+                                                <p class="rs description">E-mail: <?php echo $email; ?><br>Localização: <?php echo $cidade.", ".$UF; ?><br>Profissão: <?php echo $profissao;?><br>Empresa: <?php  echo $empresa?><br>Cargo: <?php echo $cargo; ?></p>
                                             </div>
-                                        </div><!--end: .other-post-item -->
-                                        <div class="media other-post-item">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-2.jpg" alt="$TITLE">
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs title-other-post">
-                                                    <a href="#" class="be-fc-orange fw-b">John Doe</a>
-                                                </h4>
-                                                <p class="rs fc-gray time-post pb10">posted 5 days ago</p>
-                                                <p class="rs description">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            </div>
-                                        </div><!--end: .other-post-item -->
-                                        <div class="media other-post-item">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-3.jpg" alt="$TITLE">
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs title-other-post">
-                                                    <a href="#" class="be-fc-orange fw-b">John Doe</a>
-                                                </h4>
-                                                <p class="rs fc-gray time-post pb10">posted 5 days ago</p>
-                                                <p class="rs description">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            </div>
-                                        </div><!--end: .other-post-item -->
-                                        <div class="media other-post-item">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-4.jpg" alt="$TITLE">
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs title-other-post">
-                                                    <a href="#" class="be-fc-orange fw-b">John Doe</a>
-                                                </h4>
-                                                <p class="rs fc-gray time-post pb10">posted 5 days ago</p>
-                                                <p class="rs description">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            </div>
-                                        </div><!--end: .other-post-item -->
-                                        <div class="media other-post-item">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-1.jpg" alt="$TITLE">
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs title-other-post">
-                                                    <a href="#" class="be-fc-orange fw-b">John Doe</a>
-                                                </h4>
-                                                <p class="rs fc-gray time-post pb10">posted 5 days ago</p>
-                                                <p class="rs description">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            </div>
-                                        </div><!--end: .other-post-item -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div><!--end: .tab-pane(Updates) -->
+                            </div>
                         </div>
                         <div>
-                            <h3 class="rs alternate-tab accordion-label">Backers (270)</h3>
+                            <h3 class="rs alternate-tab accordion-label">Localização</h3>
                             <div class="tab-pane accordion-content">
-                                <div class="tab-pane-inside">
-                                    <div class="project-author pb20">
-                                        <div class="media">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-1.jpg" alt="$USER_NAME"/>
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b">John Doe</a></h4>
-                                                <p class="rs">Chicago, IL</p>
-                                                <p class="rs fc-gray">5 projects</p>
-                                            </div>
-                                        </div>
-                                    </div><!--end: .project-author -->
-                                    <div class="project-author pb20">
-                                        <div class="media">
-                                            <a href="#" class="thumb-left">
-                                                <img src="content/images/ex/th-90x90-1.jpg" alt="$USER_NAME"/>
-                                            </a>
-                                            <div class="media-body">
-                                                <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b">John Doe</a></h4>
-                                                <p class="rs">Chicago, IL</p>
-                                                <p class="rs fc-gray">5 projects</p>
-                                            </div>
-                                        </div>
-                                    </div><!--end: .project-author -->
-                                </div>
-                                <div class="project-btn-action">
-                                    <a class="btn btn-red" href="#">Investir</a>
-                                    <a class="btn btn-black" href="#">Esclareça suas duvidas! </a>
-                                </div>
-                            </div><!--end: .tab-pane(Backers) -->
-                        </div>
-                        <div>
+                                <div id="map" style="width: 100%"></div>
+                            </div>
+                        </div> 
+<!--                         <div>
                             <h3 class="rs active alternate-tab accordion-label">Comments (2)</h3>
                             <div class="tab-pane accordion-content">
                                 <div class="box-list-comment">
@@ -223,7 +165,7 @@
                                             <p class="rs comment-content"> Fusce tellus. Sed metus augue, convallis et, vehicula ut, pulvinar eu, ante. Integer orci tellus, tristique vitae, consequat nec, porta vel, lectus</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                     <div class="media comment-item">
                                         <a href="#" class="thumb-left">
                                             <img src="content/images/ex/th-90x90-2.jpg" alt="$TITLE">
@@ -236,7 +178,7 @@
                                             <p class="rs comment-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere felis nec tortor. Pellentesque faucibus. Ut accumsan ultricies elit.</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                     <div class="media comment-item lv2">
                                         <a href="#" class="thumb-left">
                                             <img src="content/images/ex/th-90x90-3.jpg" alt="$TITLE">
@@ -249,7 +191,7 @@
                                             <p class="rs comment-content">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                     <div class="media comment-item lv2">
                                         <a href="#" class="thumb-left">
                                             <img src="content/images/ex/th-90x90-4.jpg" alt="$TITLE">
@@ -262,7 +204,7 @@
                                             <p class="rs comment-content">Curabitur vel dolor ultrices ipsum dictum tristique. Praesent vitae lacus. Ut velit enim, vestibulum non, fermentum nec,</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                     <div class="media comment-item lv3">
                                         <a href="#" class="thumb-left">
                                             <img src="content/images/no-avatar.png" alt="$TITLE">
@@ -275,7 +217,7 @@
                                             <p class="rs comment-content">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                     <div class="media comment-item">
                                         <a href="#" class="thumb-left">
                                             <img src="content/images/ex/th-90x90-1.jpg" alt="$TITLE">
@@ -288,10 +230,10 @@
                                             <p class="rs comment-content"> Morbi eget arcu. Morbi porta, libero id ullamcorper nonummy, nibh ligula pulvinar metus, eget consectetuer augue nisi quis lacus. Ut ac mi quis lacus mollis aliquam. Curabitur iaculis tempus eros. Curabitur vel mi sit amet magna malesuada ultrices</p>
                                             <p class="rs time-post">5 days ago</p>
                                         </div>
-                                    </div><!--end: .comment-item -->
+                                    </div>
                                 </div>
-                            </div><!--end: .tab-pane(Comments) -->
-                        </div>
+                            </div>
+                        </div> -->
                       </div>
                 </div><!--end: .project-tab-detail -->
             </div>
@@ -322,17 +264,12 @@
                     <h3 class="title-box">Investimento por</h3>
                     <div class="media">
                         <a href="#" class="thumb-left">
-                            <img src="content/images/ex/th-90x90-1.jpg" alt="$USER_NAME"/>
+                            <img src="content/images/perfilUsuario/<?php echo  $imgPerfil?>.jpg" alt="$USER_NAME"/>
                         </a>
                         <div class="media-body">
-                            <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b">John Doe</a></h4>
-                            <p class="rs">Chicago, IL</p>
-                            <p class="rs fc-gray">5 projects</p>
+                            <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nomeAgricultor ?></a></h4>
+                            <p class="rs"><?php echo $cidade ?>, <?php echo $UF ?></p>
                         </div>
-                    </div>
-                    <div class="author-action">
-                        <a class="btn btn-red" href="#">Contate-o</a><!-- 
-                        <a class="btn btn-white" href="#">See full bio</a> -->
                     </div>
                 </div>
             </div><!--end: .project-author -->
