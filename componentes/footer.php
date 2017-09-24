@@ -69,21 +69,12 @@
             </div>
         </div><!--end: .email-newsletter -->
         <div class="grid_6">
-            <h3 class="rs title">Discover &amp; Create</h3>
+            <h3 class="rs title">Menu</h3>
             <div class="footer-menu">
                 <ul class="rs">
-                    <li><a class="be-fc-orange" href="#">What is Kickstars</a></li>
-                    <li><a class="be-fc-orange" href="#">Start a project</a></li>
-                    <li><a class="be-fc-orange" href="#">Project Guidlines</a></li>
-                    <li><a class="be-fc-orange" href="#">Press</a></li>
-                    <li><a class="be-fc-orange" href="#">Stats</a></li>
-                </ul>
-                <ul class="rs">
-                    <li><a class="be-fc-orange" href="#">Staff Picks</a></li>
-                    <li><a class="be-fc-orange" href="#">Popular</a></li>
-                    <li><a class="be-fc-orange" href="#">Recent</a></li>
-                    <li><a class="be-fc-orange" href="#">Small Projects</a></li>
-                    <li><a class="be-fc-orange" href="#">Most Funded</a></li>
+                    <li><a class="be-fc-orange" href="investimentos.php">Investimentos</a></li>
+                    <li><a class="be-fc-orange" href="enviarInvestimento.php">Sou agricultor</a></li>
+                    <li><a class="be-fc-orange" href="contato.php">Contato</a></li>
                 </ul>
                 <div class="clear"></div>
             </div>
