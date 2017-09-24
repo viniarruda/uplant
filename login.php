@@ -1,37 +1,44 @@
 <?php include "componentes/header.php"; ?>
 
-<div class="container-login">
-    <div class="container_12 clearfix">
-        <div class="grid_6">
+<div class="container-login ">
+    <div class="layout-2cols clearfix">
+        <div class="clear"></div>
+        <div class="content grid_6">
             <div class="form login-form">
-              <?php if(isset($_POST['cadastro']) && $_POST['cadastro'] == 'ok') {
+              <?php 
 
-                $email = $_POST['email'];
-                $senha = $_POST['password'];
-                $nome = $_POST['name'];
-                // $cpf = $_POST['cpf'];
+                if(isset($_POST['cadastro']) && $_POST['cadastro'] == 'ok') {
 
-                $verificar_usuario = "SELECT email FROM users WHERE email = '$email' ";
+                    $email = $_POST['email'];
+                    $senha = $_POST['password'];
+                    $nome = $_POST['name'];
+                    // $cpf = $_POST['cpf'];
 
-                $query = mysqli_query($conexao, $verificar_usuario)
-                         or die (mysqli_error());
+                    $verificar_usuario = "SELECT email FROM users WHERE email = '$email' ";
 
-                if( @mysqli_num_rows($query) >= '1' ) {
-                  echo "<script language='javascript' type='text/javascript'>alert('Já existe um cadastro com esse e-mail');</script>";
+                    $query = mysqli_query($conexao, $verificar_usuario)
+                             or die (mysqli_error());
 
-                } else {
-                  $cadastra_usuario = "INSERT INTO users (email, password, name) VALUES ('$email', '$senha', '$nome')";
+                    if( @mysqli_num_rows($query) >= '1' ) {
+                      echo "<script language='javascript' type='text/javascript'>alert('Já existe um cadastro com esse e-mail');</script>";
 
-                  $query_insert = mysqli_query($conexao, $cadastra_usuario);
+                    } else {
+                      $cadastra_usuario = "INSERT INTO users (email, password, name) VALUES ('$email', '$senha', '$nome')";
 
-                  if($query_insert) {
-                    echo "<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');</script>";
-                  } else {
-                   echo "<script language='javascript' type='text/javascript'>alert('Erro ao cadastrar usuário');</script>";
-                  }
-                }
-              } ?>
+                      $query_insert = mysqli_query($conexao, $cadastra_usuario);
+
+                      if($query_insert) {
+                        
+                        echo "<script language='javascript' type='text/javascript'>alert('Cadastro realizado com sucesso!');
+                        window.location.href='editarUsuario.php'</script>";
+                      } else {
+                       echo "<script language='javascript' type='text/javascript'>alert('Erro ao cadastrar usuário');</script>";
+                      }
+                    }
+                } 
+              ?>
                 <form action="" name="cadastro" method="post" enctype="multipart/form-data">
+                    <div class="clear"></div>
                     <h3 class="rs title-form">Registrar</h3>
                     <div class="box-white">
                         <h4 class="rs title-box">Novo na Uplant?</h4>
@@ -43,16 +50,16 @@
                             <div class="wrap-2col clearfix">
                                 <div class="col">
                                     <label for="txt_email">
-                                        <input id="txt_email" class="txt fill-width" name="email" type="email" placeholder="Entre com seu e-mail" required />
+                                        <input id="txt_email" class="txt fill-width" name="email" type="email" placeholder="Entre com seu e-mail"/>
                                     </label>
                                 </div>
                                 <div class="col">
                                     <label for="txt_password">
-                                        <input id="txt_password" name="password" class="txt fill-width" type="password" required placeholder="Enter password"/>
+                                        <input id="txt_password" name="password" class="txt fill-width" type="password" placeholder="Enter password"/>
                                     </label>
                                 </div>
                             </div>
-                            <p class="rs pb10">By signing up, you agree to our <a href="#" class="fc-orange">terms of use</a> and <a href="#" class="fc-orange">privacy policy</a>.</p>
+                            <p class="rs pb10">Criando um usuário, você estará concordando com nossa <a href="#" class="fc-orange">termos de uso</a> e <a href="#" class="fc-orange">política de privacidade</a>.</p>
                             <p class="rs ta-c">
                                 <input type="hidden" name="cadastro" value="ok"/>
                                 <input type="submit" name="Cadastrar" value="Cadastrar" class="btn btn-red btn-submit"/>
@@ -62,9 +69,10 @@
                 </form>
             </div>
         </div>
-        <div class="grid_4">
+        <div class="content grid_4">
             <div class="form login-form">
                 <form action="user-authentication.php" method="post" name="login_form">
+                    <div class="clear"></div>
                     <h3 class="rs title-form">Login</h3>
                     <div class="box-white">
                         <h4 class="rs title-box">Você já possui uma conta?</h4>

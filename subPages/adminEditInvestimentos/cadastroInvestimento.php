@@ -1,6 +1,7 @@
 
 <div>
     <div class="form form-profile">
+     
         
         <?php 
             //função para armazenamento de imagens
@@ -50,14 +51,15 @@
                     Redimensionar($tmp, $name, 500, $pasta);
 
                     $data = muda_data($_POST['data_inicio']);
-                    $query_select = "INSERT INTO investimento (nome_plantacao, nome_agricultor, total_arrecadado, texto, thumb_plantacao, data_inicio, nome_documento, total_dias, $resumo) VALUES ('$nomePlantacao','$nomeAgricultor', '$valorInvestimento', '$txt', '$name', '$data', '$novoNomeDocumento', '$totalDias'm '$txt_resumo' )";
+
+                    $query_select = "INSERT INTO investimento (nome_plantacao, nome_agricultor,  texto, thumb_plantacao, data_inicio, nome_documento, total_dias, txt_resumo) VALUES ('$nomePlantacao','$nomeAgricultor',  '$txt', '$name', '$data', '$name', '$totalDias', '$resumo' )";
 
                     $insert = mysqli_query($conexao, $query_select);
 
                     if($insert)
                         echo "<script language='javascript' type='text/javascript'>alert('Cadastro de investimento realizado com sucesso!');window.location.href='perfilAdmin.php'</script>";
                     else
-                        echo "<script language='javascript' type='text/javascript'>alert('Cadastro de investimento não foi possível ser realizado!');window.location.href='perfilAdmin.php'</script>";
+                        echo "<script language='javascript' type='text/javascript'>alert('Ué Cadastro de investimento não foi possível ser realizado!');window.location.href='perfilAdmin.php'</script>";
                 }
                 else
                         echo "<script language='javascript' type='text/javascript'>alert('Cadastro de investimento não foi possível ser realizado!');window.location.href='perfilAdmin.php'</script>";
@@ -106,7 +108,7 @@
                 <label class="lbl">Verba Necessária (R$)</label>
                 <div class="val">
                    <div class="layout-3cols">
-                        <input class="txt" type="text"   name="valor_investimento" onKeyUp="mascaraMoeda(this, event)" maxlength="12" id="valor_investimento">
+                        <input class="txt" type="text"   name="valor_investimento" id="moeda" maxlength="12" id="valor_investimento">
                    </div>
                 </div>
             </div>
@@ -119,7 +121,7 @@
 
             <div class="row-item clearfix">
                 <label for="txt_content_contact">
-                    <textarea name="texto" id="texto" cols="30" rows="10"  maxlength="500" class="txt fill-width" placeholder="Descrição da plantação"></textarea>
+                    <textarea name="texto" id="texto" cols="30" rows="10"  maxlength="5000" class="txt fill-width" placeholder="Descrição da plantação"></textarea>
                 </label>
             </div>
 
