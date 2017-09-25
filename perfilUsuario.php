@@ -44,6 +44,7 @@
         }
 
 
+
         $aplicacao_query = "SELECT DataAplicacao, FK_IdProjeto, ValorAplicado, StatusPagamento
                           FROM aplicacao
                           WHERE FK_IdInvestidor = '$id_usuario' ";
