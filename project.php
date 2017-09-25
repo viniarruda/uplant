@@ -161,12 +161,8 @@
                 <div class="box-gray">
                     <div class="project-date clearfix">
                         <i class="icon iCalendar"></i>
-                        <span class="val"><span class="fw-b">Início: </span>Apr 8, 2013</span>
-                    </div>
-                    <div class="project-date clearfix">
-                        <i class="icon iClock"></i>
-                        <span class="val"><span class="fw-b">Fim: </span>Apr 8, 2013</span>
-                    </div>     
+                        <span class="val"><span class="fw-b">Dias restantes: </span><?php echo $total_dias; ?></span>
+                    </div>   
                     <form name="Investimentir" action="investir.php?tmpId=<?php echo $tmpId; ?>" method="POST" enctype="multipart/form-data">
                         <input type="hidden"  name="tmpId"  value="<?php echo $tmpId; ?>"/>
                         <a href="investir.php?tmpId=<?php echo $tmpId; ?>" class="btn btn-green btn-buck-project"   >
