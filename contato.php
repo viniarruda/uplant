@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php include "componentes/header.php";?>
     <?php
         if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {

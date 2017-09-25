@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
     <?php include "scripts/conexao.php"; ?>
@@ -44,6 +45,18 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="manifest" href="/manifest.json"/>
 </head>
+<?php
+        if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
+           ?> <script> $('.btn-login').css('display', 'initial');</script> <?php
+        } else {
+    ?>
+    <script>
+       $('.btn-login').css('display', 'none');
+       $('.btn-cadastro').css('display', 'none');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');
+    </script>
+    <?php } ?>
 <body>
 <div id="wrapper">
     <header id="header">
