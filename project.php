@@ -56,9 +56,6 @@
     ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-cadastro').css('display', 'none');
-       $('.btn-perfil').css('display', 'initial');
-       $('.btn-logout').css('display', 'initial');
     </script>
     <?php } ?>
     <div class="layout-2cols">
@@ -132,7 +129,7 @@
                                     <div class="list-last-post">
                                         <div class="media other-post-item">
                                             <a href="#" class="thumb-left">
-                                                <img src="content/images/perfilUsuario/<?php echo $imgPerfil; ?>.jpg">
+                                                <img src="content/images/perfilUsuario/000.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <h4 class="rs title-other-post">
@@ -267,7 +264,7 @@
                     <h3 class="title-box">Investimento por</h3>
                     <div class="media">
                         <a href="#" class="thumb-left">
-                            <img src="content/images/perfilUsuario/<?php echo  $imgPerfil?>.jpg" alt="$USER_NAME"/>
+                            <img src="content/images/perfilUsuario/000.jpg" alt="$USER_NAME"/>
                         </a>
                         <div class="media-body">
                             <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nomeAgricultor ?></a></h4>
