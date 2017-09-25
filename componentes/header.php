@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/equipe.css"/>
+    <link rel="stylesheet" href="css/menuresponsivo.css"/>
     <link rel="stylesheet" type="text/css" href="teste.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
