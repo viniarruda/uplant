@@ -10,7 +10,6 @@
 <script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
 <script type="text/javascript" src="js/md_slider.min.js"></script>
 <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
-<script type="text/javascript" src="js/twitter.min.js"></script>
 <script type="text/javascript" src="js/pie.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/scripts-novos.js"></script>
