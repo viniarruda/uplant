@@ -14,3 +14,10 @@
 .card-equipe p {
 	text-align: center;
 }
+
+@media screen and (max-device-width:  979px), screen and (max-width:  979px) {
+	#header .top-message {
+		display: block;
+		margin-top: 8px;
+	}
+}
