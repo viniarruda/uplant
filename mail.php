@@ -11,7 +11,7 @@ $website     = $_POST["website"];
 $subject	 = $_POST["subject"];
 $mensagem    = $_POST["mensagem"];
 $assunto 	 = "Uplant - Contato ";
-$message = echo "<strong>Nome:</strong>$nome <br />
+$message = "<strong>Nome:</strong>$nome <br />
 			<strong>Email: 		</strong>$email<br />
 			<strong>Enviado: 	</strong>$data $hora<br />
 			<strong>Telefone: 	</strong>$telefone<br />
