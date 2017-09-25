@@ -70,9 +70,6 @@
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="investimentos.php">Investir</a></li>
                                 <li><a href="contato.php">Contato</a></li>
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="logout.php" class="logout">Logout</a></li>
-                                <li><a href="login.php">Cadastro</a></li>
                             </ul>
                         </div>
                     </nav>

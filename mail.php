@@ -11,17 +11,14 @@ $website     = $_POST["website"];
 $subject	 = $_POST["subject"];
 $mensagem    = $_POST["mensagem"];
 $assunto 	 = "Uplant - Contato ";
-$message = "<strong>Nome:</strong>$nome <br />
-			<strong>Email: 		</strong>$email<br />
-			<strong>Enviado: 	</strong>$data $hora<br />
-			<strong>Telefone: 	</strong>$telefone<br />
-			<strong>Cidade: 	</strong>$cidade<br />
-			<strong>Website: 	</strong>$website<br />
-			<strong>Assunto: 	</strong>$subject<br />
-			<strong>Conteudo: 	</strong>$mensagem<br /> <br />
-			<strong>Data:		</strong>$data . $hora<br />
-			<strong>Ip: 		</strong>$ip<br />
-			<strong>Navegador:  </strong>$navegador";
+$message = "Nome: $nome <br />
+			Email: $email<br />
+			Enviado: $data $hora<br />
+			Telefone: $telefone<br />
+			Conteudo: $mensagem<br /> <br />
+			Data: $data . $hora<br />
+			Ip: $ip<br />
+			Navegador:  $navegador";
 $email_remetente = "vinny-arruda@hotmail.com";
 $headers = "MIME-Version: 1.1";
 $headers .= "Content-type: text/html; charset=iso-8859-1";
