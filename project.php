@@ -1,4 +1,4 @@
- <?php session_start(); ?>
+<?php session_start(); ?>
 <?php  
     include "componentes/header.php";?>
     <?php 
@@ -51,7 +51,7 @@
 
     <?php
         if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
-           ?> <script> $('.btn-login').css('display', 'inline-block');</script> <?php
+           ?> <script> $('.btn-login').css('display', 'initial');</script> <?php
         } else {
     ?>
     <script>
@@ -132,7 +132,7 @@
                                     <div class="list-last-post">
                                         <div class="media other-post-item">
                                             <a href="#" class="thumb-left">
-                                                <img src="content/images/perfilUsuario/<?php echo $imgPerfil; ?>.jpg">
+                                                <img src="content/images/perfilUsuario/000.jpg">
                                             </a>
                                             <div class="media-body">
                                                 <h4 class="rs title-other-post">
@@ -161,8 +161,12 @@
                 <div class="box-gray">
                     <div class="project-date clearfix">
                         <i class="icon iCalendar"></i>
-                        <span class="val"><span class="fw-b">Dias restantes: </span><?php echo $total_dias; ?></span>
-                    </div>    
+                        <span class="val"><span class="fw-b">Início: </span>Apr 8, 2013</span>
+                    </div>
+                    <div class="project-date clearfix">
+                        <i class="icon iClock"></i>
+                        <span class="val"><span class="fw-b">Fim: </span>Apr 8, 2013</span>
+                    </div>     
                     <form name="Investimentir" action="investir.php?tmpId=<?php echo $tmpId; ?>" method="POST" enctype="multipart/form-data">
                         <input type="hidden"  name="tmpId"  value="<?php echo $tmpId; ?>"/>
                         <a href="investir.php?tmpId=<?php echo $tmpId; ?>" class="btn btn-green btn-buck-project"   >
@@ -178,7 +182,7 @@
                     <h3 class="title-box">Investimento por</h3>
                     <div class="media">
                         <a href="#" class="thumb-left">
-                            <img src="content/images/perfilUsuario/<?php echo  $imgPerfil?>.jpg" alt="$USER_NAME"/>
+                            <img src="content/images/perfilUsuario/000.jpg" alt="$USER_NAME"/>
                         </a>
                         <div class="media-body">
                             <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nomeAgricultor ?></a></h4>
@@ -192,3 +196,4 @@
         <div class="clear"></div>
     </div>
 <?php include "componentes/footer.php";?>
+
