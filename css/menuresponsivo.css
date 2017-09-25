@@ -3,4 +3,7 @@
 		display: block!important;
 		margin-top: 8px;
 	}
+	.grid_6_mobile, .grid_4_mobile {
+		width: 100%;
+	}
 }
