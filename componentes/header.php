@@ -56,7 +56,7 @@
                             <li class="sep"></li>
                             <li><a href="quemsomos.php"><i class="fa fa-info fa-menu-top"></i> Sobre</a></li>
                             <li class="sep"></li>
-                            <li><a href="contato.php/"><i class="fa fa-question fa-menu-top"></i> Ajuda</a></li>
+                            <li><a href="contato.php"><i class="fa fa-question fa-menu-top"></i> Ajuda</a></li>
                             <li class="sep"></li>
                             <li><a href="contato.php"><i class="fa fa-envelope fa-menu-top"></i> Contato</a></li>
                         </ul>
@@ -104,7 +104,7 @@
                         </div>
                         <span class="sep"></span>
                         <div class="nav-item">
-                            <a href="#" class="nav-title">Por que devo investir?</a>
+                            <a href="contato.php" class="nav-title">Por que devo investir?</a>
                             <p class="rs nav-description">Tire suas dúvidas</p>
                         </div>
                     </div>

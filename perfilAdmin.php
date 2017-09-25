@@ -9,7 +9,9 @@
 ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-perfil').css('display', 'inline-block');
+       $('.btn-cadastro').css('display', 'none');
+       $('.btn-perfil').css('display', 'initial');
+       $('.btn-logout').css('display', 'initial');
     </script>
     <div class="layout-2cols">
         <div class="content grid_8">

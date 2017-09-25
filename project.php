@@ -152,91 +152,6 @@
                                 <div id="map" style="width: 100%"></div>
                             </div>
                         </div> 
-<!--                         <div>
-                            <h3 class="rs active alternate-tab accordion-label">Comments (2)</h3>
-                            <div class="tab-pane accordion-content">
-                                <div class="box-list-comment">
-                                    <div class="media comment-item">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/ex/th-90x90-1.jpg" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">John Doe</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content"> Fusce tellus. Sed metus augue, convallis et, vehicula ut, pulvinar eu, ante. Integer orci tellus, tristique vitae, consequat nec, porta vel, lectus</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                    <div class="media comment-item">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/ex/th-90x90-2.jpg" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">Eminem</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere felis nec tortor. Pellentesque faucibus. Ut accumsan ultricies elit.</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                    <div class="media comment-item lv2">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/ex/th-90x90-3.jpg" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">Snoop Dogg</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                    <div class="media comment-item lv2">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/ex/th-90x90-4.jpg" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">Obama</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content">Curabitur vel dolor ultrices ipsum dictum tristique. Praesent vitae lacus. Ut velit enim, vestibulum non, fermentum nec,</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                    <div class="media comment-item lv3">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/no-avatar.png" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">Mark Lenon</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content">Nam nec sem ac risus congue varius. Maecenas interdum ipsum tempor ipsum fringilla eu vehicula urna vehicula.</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                    <div class="media comment-item">
-                                        <a href="#" class="thumb-left">
-                                            <img src="content/images/ex/th-90x90-1.jpg" alt="$TITLE">
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="rs comment-author">
-                                                <a href="#" class="be-fc-orange fw-b">Dr. Dre</a>
-                                                <span class="fc-gray">say:</span>
-                                            </h4>
-                                            <p class="rs comment-content"> Morbi eget arcu. Morbi porta, libero id ullamcorper nonummy, nibh ligula pulvinar metus, eget consectetuer augue nisi quis lacus. Ut ac mi quis lacus mollis aliquam. Curabitur iaculis tempus eros. Curabitur vel mi sit amet magna malesuada ultrices</p>
-                                            <p class="rs time-post">5 days ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                       </div>
                 </div><!--end: .project-tab-detail -->
             </div>
@@ -246,12 +161,8 @@
                 <div class="box-gray">
                     <div class="project-date clearfix">
                         <i class="icon iCalendar"></i>
-                        <span class="val"><span class="fw-b">Início: </span>Apr 8, 2013</span>
-                    </div>
-                    <div class="project-date clearfix">
-                        <i class="icon iClock"></i>
-                        <span class="val"><span class="fw-b">Fim: </span>Apr 8, 2013</span>
-                    </div>     
+                        <span class="val"><span class="fw-b">Dias restantes: </span><?php echo $total_dias; ?></span>
+                    </div>    
                     <form name="Investimentir" action="investir.php?tmpId=<?php echo $tmpId; ?>" method="POST" enctype="multipart/form-data">
                         <input type="hidden"  name="tmpId"  value="<?php echo $tmpId; ?>"/>
                         <a href="investir.php?tmpId=<?php echo $tmpId; ?>" class="btn btn-green btn-buck-project"   >

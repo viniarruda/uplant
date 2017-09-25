@@ -28,6 +28,7 @@
             <div class="md-objects">
                 <div class="md-object rs slide-description2" data-x="20" data-y="250" data-width="390" data-height="100" data-start="1400" data-stop="4500" data-easein="random" data-easeout="random">
                     <p>Invista sem custos e burocracia - A plataforma funciona 100% online sem nenhumataxa para o investidor.</p>
+                    <a href="investimentos.php" class="btn btn-gray" style="padding: 9px 10px 7px;">Saiba mais</a>
                 </div>
                 <div class="md-object" data-x="454" data-y="44" data-width="327" data-height="268" data-start="1000" data-stop="5500" data-easein="random" data-easeout="random" style=""><img src="content/images/ex/slide1_1.png" alt="Responsive" width="327" height="268" /></div>
                 <div class="md-object" data-x="628" data-y="142" data-width="298" data-height="176" data-start="1600" data-stop="5100" data-easein="random" data-easeout="random" style=""><img src="content/images/ex/slide1_2.png" alt="Responsive" width="298" height="176" /></div>
