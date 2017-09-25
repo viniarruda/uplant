@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
 <head>
     <?php include "scripts/conexao.php"; ?>
@@ -45,18 +44,6 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="manifest" href="/manifest.json"/>
 </head>
-<?php
-        if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
-           ?> <script> $('.mobile_login').css('display', 'initial');</script> <?php
-        } else {
-    ?>
-    <script>
-       $('.mobile_login').css('display', 'none');
-       $('.mobile_cadastro').css('display', 'none');
-       $('.mobile_perfil').css('display', 'initial');
-       $('.mobile_logout').css('display', 'initial');
-    </script>
-    <?php } ?>
 <body>
 <div id="wrapper">
     <header id="header">
@@ -83,10 +70,6 @@
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="investimentos.php">Investir</a></li>
                                 <li><a href="contato.php">Contato</a></li>
-                                <li class="mobile_login" ><a href="contato.php">Login</a></li>
-                                <li class="mobile_cadastro" ><a href="contato.php">Cadastro</a></li>
-                                <li class="mobile_logout" ><a href="contato.php">Logout</a></li>
-                                <li class="mobile_perfil" ><a href="contato.php">Perfil</a></li>
                             </ul>
                         </div>
                     </nav>
