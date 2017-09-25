@@ -62,12 +62,10 @@
 ?>
     <script>
        $('.btn-login').css('display', 'none');
-       $('.btn-cadastro').css('display', 'none');
-       $('.btn-perfil').css('display', 'initial');
-       $('.btn-logout').css('display', 'initial');
+       $('.btn-perfil').css('display', 'inline-block');
     </script>
-    <div class="layout-2cols">
-        <div class="content grid_8">
+        <div class=" container_12">
+            <h2 class="common-title">Perfil Usuário</h2>
             <div class="project-detail">
                 <div class="project-tab-detail tabbable accordion">
                     <ul class="nav nav-tabs clearfix">
@@ -85,7 +83,15 @@
                                                 <img src="content/images/perfilUsuario/<?php echo $Img; ?>.jpg">
                                             </a>
                                             <div class="media-body">
-                                                <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nome_usuario; ?></a></h4>
+                                                <div class="layout-2cols" style="margin-top: -30px">
+                                                  <div style="margin-left: 0px;" class="grid_9">
+                                                    <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nome_usuario; ?></a></h4>
+                                                  </div>
+                                                  <div class="grid_1">
+                                                    <h6 style="margin: 0px"><a href="editarUsuario.php" class="be-fc-orange fw-b">Editar</a></h6>
+                                                  </div>
+                                                </div>
+                                                <div class="clear"></div>
                                                 <p class="rs"><?php echo $Cidade_usuario; ?></p>
                                                 <p class="rs fc-gray pb10">0 Projetos</p>
                                                 <div class="legenda_perfil">
@@ -106,6 +112,7 @@
                                                   <p class="rs legenda"><b>Profissão:</b>  <?php echo  $Profissao_usuario; ?>  </p>
                                                   <p class="rs legenda"><b>Empresa:</b>  <?php echo  $Empresa_usuario; ?>  </p>
                                                   <p class="rs legenda"><b>Cargo:</b>  <?php echo  $Cargo_usuario; ?>  </p>
+                                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -148,9 +155,9 @@
                                                 </h4>
                                                 <p class="rs fc-gray time-post">Valor Investido: <?php echo  $ValorAplicacao ?></p>
                                                 <p class="rs "><?php echo $StatusAplicacao; ?></p>
-                                                <form name="visualizarInvestimento" action="project.php?tmpId=<?php echo $IdProjAplicacao; ?>" method="POST" enctype="multipart/form-data">
+                                                <form name="visualizarInvestimento" action="project.php?tmpId=<?php echo $id_investimento; ?>" method="POST" enctype="multipart/form-data">
                                                   <input type="hidden"  name="id_investimento"  value="<?php echo $id_investimento; ?>"/>
-                                                  <input type="submit" value="Verificar Projeto" class="btn btn-red"/>
+                                                  <input type="submit" value="Verificar Projetos" class="btn btn-red"/>
                                               </form>
                                             </div>
                                         </div>
@@ -165,24 +172,7 @@
                 </div><!--end: .project-tab-detail -->
             </div>
         </div><!--end: .content -->
-        <div class="sidebar grid_4">
-            <div class="box-gray project-author">
-                <h3 class="title-box">Bem-Vindo</h3>
-                <div class="media">
-                    <div class="media-body">
-                        <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php echo $nome_usuario ?></a></h4>
-                        <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                        <p class="rs fc-gray">projetos </p>
-                    </div>
-                </div>
-                <div class="author-action">
-                    <form action="editarUsuario.php">
-                      <input class="btn btn-red btn-buck-project" type="submit" value="Editar Usuário" class="btn btn-red"/>
-                    </form>
-                    <a class="btn btn-red" href="logout.php">Logout</a>
-                </div>
-            </div><!--end: .project-author -->
-        </div><!--end: .sidebar -->
+
         <div class="clear"></div>
     </div>
 <?php }
