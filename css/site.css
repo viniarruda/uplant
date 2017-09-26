@@ -146,6 +146,9 @@ span.social-header:hover {
     display: block!important;
     margin-top: 8px;
   }
+  #logo {
+    padding: 10px 0 0 0;
+  }
   .grid_6_mobile {
     width: 100%;
   }
