@@ -144,7 +144,7 @@
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
 
-                                    $qtdProjetos[$projetos] = $fe['projetos'];
+                                    $qtdProjetos[$projetos] = $fetchAplicacao['projetos'];
                                     $projetos++;
 
                                 ?>
