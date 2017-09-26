@@ -1,7 +1,7 @@
  <?php session_start(); ?>
-<?php  
+<?php
     include "componentes/header.php";?>
-    <?php 
+    <?php
 
         if (isset($_GET['tmpId'])){
             $tmpId = $_GET['tmpId'];
@@ -21,7 +21,7 @@
             $valorInvestimento = $fetch[7];
             $emailAgricultor = $fetch[8];
 
-            if ($valorInvestimento == 0) 
+            if ($valorInvestimento == 0)
                 $porcentagem = 0;
             else
                 $porcentagem = ($total_arrecadado/$valorInvestimento) *100;
@@ -151,7 +151,7 @@
                             <div class="tab-pane accordion-content">
                                 <div id="map" style="width: 100%"></div>
                             </div>
-                        </div> 
+                        </div>
 <!--                         <div>
                             <h3 class="rs active alternate-tab accordion-label">Comments (2)</h3>
                             <div class="tab-pane accordion-content">
@@ -246,12 +246,12 @@
                 <div class="box-gray">
                     <div class="project-date clearfix">
                         <i class="icon iCalendar"></i>
-                        <span class="val"><span class="fw-b">Início: </span>Apr 8, 2013</span>
+                        <span class="val"><span class="fw-b">Início: </span>26 Out 2017</span>
                     </div>
-                    <div class="project-date clearfix">
+                    <!-- <div class="project-date clearfix">
                         <i class="icon iClock"></i>
                         <span class="val"><span class="fw-b">Fim: </span>Apr 8, 2013</span>
-                    </div>     
+                    </div>      -->
                     <form name="Investimentir" action="investir.php?tmpId=<?php echo $tmpId; ?>" method="POST" enctype="multipart/form-data">
                         <input type="hidden"  name="tmpId"  value="<?php echo $tmpId; ?>"/>
                         <a href="investir.php?tmpId=<?php echo $tmpId; ?>" class="btn btn-green btn-buck-project"   >
