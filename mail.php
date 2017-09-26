@@ -22,8 +22,6 @@ $message = "Nome: $nome <br />
 $email_remetente = "vinny-arruda@hotmail.com";
 $headers = "MIME-Version: 1.1";
 $headers .= "Content-type: text/html; charset=iso-8859-1";
-$headers = 'From: webmaster@' . $_SERVER[HTTPS] . "\r\n" .
-   'X-Mailer: PHP/' . phpversion();
 $headers .= "From: $email_remetente"; // remetente
 $headers .= "Return-Path: $email_remetente"; // return-path
 $headers .= "Reply-To: $email"; // Endereço (devidamente validado) que o seu usuário informou no contato
