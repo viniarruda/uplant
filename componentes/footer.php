@@ -48,7 +48,7 @@
     <div class="container_12 main-footer">
         <div class="grid_3 about-us">
             <h3 class="rs title">Uplant</h3>
-            <p class="rs description">Startup brasileira focada em investimento Crowndfounding agropecuário. </p>
+            <p class="rs description">Startup brasileira focada em investimento Crowdfunding agropecuário. </p>
             <p class="rs email"><a class="fc-default  be-fc-orange" href="mailto:info@megadrupal.com">contato@uplant.com.br</a></p>
             <p class="rs">+55 11 1234-5678</p>
         </div><!--end: .contact-info -->
