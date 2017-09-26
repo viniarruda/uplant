@@ -12,6 +12,27 @@
        $('.btn-logout').css('display', 'initial');
     </script>
     <?php } ?>
+    <?php 
+
+        if (!isset($_SESSION["email"])) {
+            $mail = null;
+            $nome = null;
+        }
+        else{
+            $mail = $_SESSION["email"];
+
+            $query = "SELECT name from users where email = '$mail'";
+
+            $resultado_query = mysqli_query($conexao, $query)
+                                or die (mysqli_error());
+
+            $fetch = mysqli_fetch_array($resultado_query);
+
+            $nome = $fetch[0];
+        }
+
+
+     ?>
     <div class="layout-2cols">
         <div class="content grid_8">
             <div class="single-page">
@@ -23,15 +44,15 @@
                             <div class="form form-post-comment">
                                 <div class="left-input">
                                     <label for="txt_name_contact">
-                                        <input id="txt_name_contact" type="text" name="nomeContato" class="txt fill-width txt-name" placeholder="Digite seu nome"/>
+                                        <input id="txt_name_contact" type="text" value="<?php echo $nome; ?>" name="nomeContato" class="txt fill-width txt-name" placeholder="Digite seu nome"/>
                                     </label>
                                     <label for="txt_email_contact">
-                                        <input id="txt_email_contact" type="email" name="emailContato" class="txt fill-width txt-email" placeholder="Digite seu e-mail"/>
+                                        <input id="txt_email_contact" type="email" value="<?php echo $mail; ?>" name="emailContato" class="txt fill-width txt-email" placeholder="Digite seu e-mail"/>
                                     </label>
                                 </div>
                                 <div class="right-input">
                                     <label for="txt_content_contact">
-                                        <textarea name="mensagem" id="txt_content_contact" cols="30" rows="10" class="txt fill-width" placeholder="Digite sua mensagem"></textarea>
+                                        <textarea name="mensagem" id="txt_content_contact"  cols="30" rows="10" class="txt fill-width" placeholder="Digite sua mensagem"></textarea>
                                     </label>
                                 </div>
                                 <div class="clear"></div>

@@ -61,7 +61,7 @@
                     <div class="sep"></div>
                     <div class="fee-item" style="margin-left: -15px;">
                         <p class="rs lbl">Verba Necessária</p>
-                        <span class="val">R$<?php echo $valorInvestimento; ?></span>
+                        <span class="val">R$<?php echo number_format($valorInvestimento, 2, ',', '.'); ?></span>
                     </div>
                     <div class="clear"></div>
                     <div class="sep"></div>
