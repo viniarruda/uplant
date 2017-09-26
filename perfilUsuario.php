@@ -12,7 +12,7 @@
      $mail = $_SESSION["email"];
 
       $usuario_query = "SELECT id, name, email, DataNascimento, CPF, RG, EstadoCivil, Pais, CEP, UF, Cidade, Endereco, Numero, Complemento, DDDResidencial, NumeroResidencial, DDDCelular, NumeroCelular, Profissao, Empresa, Cargo, imagemPefil
-                    FROM users 
+                    FROM users
                     WHERE email = '$mail' ";
       $resultado = mysqli_query($conexao,$usuario_query)
                           or die (mysqli_error());
@@ -48,7 +48,7 @@
         $aplicacao_query = "SELECT DataAplicacao, FK_IdProjeto, ValorAplicado, StatusPagamento
                           FROM aplicacao
                           WHERE FK_IdInvestidor = '$id_usuario' ";
-        
+
         $resultadoAplicacao = mysqli_query($conexao,$aplicacao_query)
                           or die (mysqli_error());
 
@@ -58,7 +58,7 @@
         $counta = $fe[0];
 
 
-   
+
 
 ?>
     <script>
@@ -96,7 +96,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                                                <p class="rs fc-gray pb10">0 Projetos</p>
+                                                <p class="rs fc-gray pb10"><?php echo $nome_plantacao = $fe[0]; ?></p>
                                                 <div class="legenda_perfil">
                                                   <p class="rs telefone"><b>Data Nascimento:</b> <?php echo $DataNascimento_usuario; ?>    </p>
                                                   <p class="rs legenda"><b>CPF:</b> <?php echo $CPF_usuario; ?></p>
@@ -115,7 +115,7 @@
                                                   <p class="rs legenda"><b>Profissão:</b>  <?php echo  $Profissao_usuario; ?>  </p>
                                                   <p class="rs legenda"><b>Empresa:</b>  <?php echo  $Empresa_usuario; ?>  </p>
                                                   <p class="rs legenda"><b>Cargo:</b>  <?php echo  $Cargo_usuario; ?>  </p>
-                                                  
+
                                                 </div>
                                             </div>
                                         </div>
@@ -127,7 +127,7 @@
                             <h3 class="rs alternate-tab accordion-label ">Projetos</h3>
                             <div class="tab-pane accordion-content">
                               <h4 class="rs comment-author">
-                                <?php 
+                                <?php
                                   if ($counta == 0) {
                                     echo "Nenhum investimento encontrado";
                                   }else{
@@ -167,7 +167,7 @@
                                     </div>
                                 <?php }
                                 } ?>
-                              </h4>     
+                              </h4>
                             </div><!--end: .tab-pane -->
                         </div>
                       </div>
