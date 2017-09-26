@@ -37,7 +37,7 @@
             if ($nivel_acesso == "admin") {
             	header("Location: perfilAdmin.php");
             } else {
-            	header("Location: perfilUsuario.php");
+            	header("Location: editarUsuario.php");
             }
 
         }
