@@ -16,7 +16,7 @@
   background-color: #3CB371;
 }
 #header .txt-message.btn-login:hover {
-  background-color: #e3e3e3;
+  background-color: #3e4b51;
   color: #92999d;
   border-color: #3e4b51;
 }
@@ -74,7 +74,8 @@ span.social-header:hover {
   padding-top: 45px;
 }
 .login-form {
-  width: 400px;
+  width: 360px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .ok {
