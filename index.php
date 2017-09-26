@@ -14,34 +14,34 @@
     <?php } ?>
 <div id="home-slider">
     <div class="md-slide-items md-slider" id="md-slider-1" data-thumb-width="105" data-thumb-height="70">
-        <div class="md-slide-item slide-0" data-timeout="6000">
+        <div class="md-slide-item slide-0" data-timeout="10000">
             <div class="md-mainimg"><img src="content/images/ex/th-slide0.jpg" alt=""></div>
             <div class="md-objects">
-                <div class="md-object rs slide-title" data-x="20" data-y="50" data-width="480" data-height="30" data-start="700" data-stop="5500" data-easein="random" data-easeout="keep">
+                <div class="md-object rs slide-title" data-x="20" data-y="50" data-width="480" data-height="30" data-start="700" data-stop="9000" data-easein="random" data-easeout="keep">
                     <h5>Procura por um investimento rentável?</h5>
                 </div>
-                <div class="md-object rs slide-description" data-x="20" data-y="200" data-width="480" data-height="90" data-start="1400" data-stop="7500" data-easein="random" data-easeout="keep">
+                <div class="md-object rs slide-description" data-x="20" data-y="200" data-width="480" data-height="90" data-start="1400" data-stop="9500" data-easein="random" data-easeout="keep">
                     <p>Seleção das safras com as melhores rentabilidades realizados pela nossa equipe</p>
                 </div>
                 <div class="md-object" data-x="495" data-y="0" data-width="612" data-height="365" data-start="1800" data-stop="7500" data-easein="fadeInRight" data-easeout="keep" style=""><img src="content/images/ex/th-slide-man.png" alt="Search Money for Your Creative Ideas" width="612" height="365" /></div>
             </div>
         </div>
-        <div class="md-slide-item slide-2" data-timeout="4000">
+        <div class="md-slide-item slide-2" data-timeout="10000">
             <div class="md-mainimg"><img src="content/images/ex/th-slide2.jpg" alt=""></div>
             <div class="md-objects">
-                <div class="md-object slide-with-background" data-x="20" data-y="58" data-width="500" data-height="170" data-padding-top="30" data-padding-bottom="30" data-padding-left="35" data-padding-right="35" data-start="300" data-stop="3600" data-easein="random" data-easeout="keep">
+                <div class="md-object slide-with-background" data-x="20" data-y="58" data-width="500" data-height="170" data-padding-top="30" data-padding-bottom="30" data-padding-left="35" data-padding-right="35" data-start="300" data-stop="9500" data-easein="random" data-easeout="keep">
                     <h2 class="rs slide-title">Segurança</h2>
                     <p class="rs slide-description2">Nossos projetos são submetidos à CVM, responsável por fiscalizar o setor financeiro no Brasil</p>
                 </div>
             </div>
         </div>
-        <div class="md-slide-item slide-1" data-timeout="6000">
+        <div class="md-slide-item slide-1" data-timeout="10000">
             <div class="md-mainimg"><img src="content/images/ex/th-slide1.jpg" alt=""></div>
             <div class="md-objects">
-                <div class="md-object rs slide-title" data-x="20" data-y="50" data-width="480" data-height="30" data-start="700" data-stop="5500" data-easein="random" data-easeout="keep">
+                <div class="md-object rs slide-title" data-x="20" data-y="50" data-width="480" data-height="30" data-start="700" data-stop="9000" data-easein="random" data-easeout="keep">
                     <h5>Ficou curioso?</h5>
                 </div>
-                <div class="md-object rs slide-description2" data-x="20" data-y="150" data-width="390" data-height="100" data-start="1400" data-stop="4500" data-easein="random" data-easeout="random">
+                <div class="md-object rs slide-description2" data-x="20" data-y="150" data-width="390" data-height="100" data-start="1400" data-stop="9500" data-easein="random" data-easeout="random">
                     <p>Invista sem custos e burocracia - A plataforma funciona 100% online sem nenhumataxa para o investidor.</p>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                             <div class="wrap-short-detail">
                                 <h3 class="rs acticle-title">Crie seu projeto</h3>
                                 <p class="rs tiny-desc">por Você!</p>
-                                <p class="rs title-description"><?php echo utf8_encode($resumo); ?></p>
+                                <p class="rs title-description">Projete seu plantio! Informe a localização, o retorno do investimento e o tempo de retorno! </p>
                                 
                             </div>
                         </div>
