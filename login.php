@@ -2,7 +2,7 @@
 
 <div class="container-login">
     <div class="container_12 clearfix">
-        <div class="grid_6 grid_6_mobile">
+        <div class="grid_6">
             <div class="form login-form">
               <?php if(isset($_POST['cadastro']) && $_POST['cadastro'] == 'ok') {
 
@@ -62,7 +62,8 @@
                 </form>
             </div>
         </div>
-        <div class="grid_4 grid_4_mobile">
+        <div class="clear clear-2col"></div>
+        <div class="grid_6">
             <div class="form login-form">
                 <form action="user-authentication.php" method="post" name="login_form">
                     <h3 class="rs title-form">Login</h3>
@@ -85,7 +86,6 @@
                         </div>
                 </form>
             </div>
-            <div class="clear"></div>
         </div>
     </div>
 </div>
