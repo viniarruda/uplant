@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$GetPost = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 	$data      = date("d/m/y"); // função para pegar a data de envio do e-mail
 	$ip        = $_SERVER['REMOTE_ADDR']; // função para pegar o ip do usuário
@@ -24,29 +24,30 @@ Nome	$nome
 Email: 			$email
 Enviado: 		$data
 Nascimento: 		$nascimento
-Telefone: 		$telefone 
-RG: 			$RG 			
+Telefone: 		$telefone
+RG: 			$RG
 CPF: 			$CPF
 
 DADOS DO EMPREENDIMENTO<br />
-Projeto: 	$Projeto 			
-Data de Início: 	$dataInicio 		
-Verba Necessária: 	$verba 
-Resumo da plantação: 	$resumo 
+Projeto: 	$Projeto
+Data de Início: 	$dataInicio
+Verba Necessária: 	$verba
+Resumo da plantação: 	$resumo
 Descrição:		$detalhado
 Data:		$data
-Ip: 		$ip 
+Ip: 		$ip
 Navegador:  $navegador";
 	$email_remetente = "gustavoaoshiro@gmail.com";
 	$headers = "MIME-Version: 1.1";
 	$headers .= "Content-type: text/html; charset=iso-8859-1";
 	$headers .= "From: $email_remetente"; // remetente
 	$headers .= "Return-Path: $email_remetente"; // return-path
+	$headers .= "Reply-To: $email"; // Endereço (devidamente validado) que o seu usuário informou no contato
 	$envio = mail("gustavoaoshiro@gmail.com", $assunto, $message, $headers, "-f$email_remetente");
 	echo "<META HTTP-EQUIV=REFRESH CONTENT= '0; URL=../../investir.php'>
 	<script type=\"text/javascript\">
 	alert(\"$Usuario, sua mensagem foi enviada com sucesso!\");
 	</script>
 	";
-	
+
 ?>
