@@ -7,8 +7,8 @@
     $obsevacoes = $GetPost['message'];
 
     $tmpIdU = $_GET['tmpIdU'];
-	  $usuario_query = "SELECT id, name, email, DataNascimento, CPF, RG, EstadoCivil, Pais, CEP, UF, Cidade, Endereco, Numero, Complemento, DDDResidencial, NumeroResidencial, DDDCelular, NumeroCelular, Profissao, Empresa, Cargo 
-                FROM users 
+	  $usuario_query = "SELECT id, name, email, DataNascimento, CPF, RG, EstadoCivil, Pais, CEP, UF, Cidade, Endereco, Numero, Complemento, DDDResidencial, NumeroResidencial, DDDCelular, NumeroCelular, Profissao, Empresa, Cargo
+                FROM users
                 WHERE id = '$tmpIdU' ";
     $resultado_query = mysqli_query($conexao, $usuario_query)
                         or die (mysqli_error());
@@ -37,7 +37,7 @@
           $Empresa_usuario = $fetch[18];
           $Cargo_usuario = $fetch[19];
         }
-	
+
 	if (isset($_GET['tmpId'])){
         $tmpId = $_GET['tmpId'];
         $investimento_query = "SELECT  nome_plantacao, nome_agricultor, total_arrecadado, numero_investidores FROM investimento where id = $tmpId";
@@ -49,12 +49,12 @@
           $nome_agricultor = $fetch[1];
           $total_arrecadado = $fetch[2];
           $numero_investidores = $fetch[3];
-        
+
         if ($numero_investidores == null) {
         	$numero_investidores = 1;
         }
         else{
-        	$numero_investidores ++;	
+        	$numero_investidores ++;
         }
 
         $novoSaldo = intval($total_arrecadado) + intval($valor) ;
@@ -66,7 +66,7 @@
         $dataEnvio = date("Y-m-d");
         $status = "Aguardando Pagamento";
 
-        $updateQueryAplicacao = "INSERT INTO aplicacao (ValorAplicado, FK_IdProjeto, FK_IdInvestidor, StatusPagamento, DataAplicacao) 
+        $updateQueryAplicacao = "INSERT INTO aplicacao (ValorAplicado, FK_IdProjeto, FK_IdInvestidor, StatusPagamento, DataAplicacao)
                                 VALUES ('$valor', '$tmpId', '$tmpIdU', '$status', '$dataEnvio') ";
         $resultado_query = mysqli_query($conexao,$updateQueryAplicacao)
                         or die (mysqli_error());
@@ -75,7 +75,7 @@
         $tmpId = null;
     }
 
-	
+
 
 	$assunto = "Investimento";
 	$data      = date("d/m/y"); // função para pegar a data de envio do e-mail
@@ -89,7 +89,7 @@ E-mail:				$email_usuario
 
 
 INFORMAÇÕES DO INVESTIMENTO
- 
+
 ID:  $tmpId
 Plantação:	$nome_plantacao
 Nome Agricultor:	$nome_agricultor
@@ -99,25 +99,25 @@ Numero Investidores:	$numero_investidores
 
 Enviado: 	$data
 Valor desejado: 	$valor
-Observaçoes: 	$obsevacoes 
+Observaçoes: 	$obsevacoes
 Investir na plantação $nome_plantacao, do agricultor $nome_agricultor que já possui R$ $total_arrecadado";
 
-	$email_remetente = "gustavoaoshiro@gmail.com";
+	$email_remetente = "contato@uplant.com.br";
 	$headers = "MIME-Version: 1.1";
 	$headers .= "Content-type: text/html; charset=iso-8859-1";
 	$headers .= "From: $email_remetente"; // remetente
 	$headers .= "Return-Path: $email_remetente"; // return-path
-	$envio = mail("gustavoaoshiro@gmail.com", $assunto, $message, $headers);
-	
+	$envio = mail("contato@uplant.com.br", $assunto, $message, $headers);
+
 ?>
-<?php 
-	
-		
-  
+<?php
+
+
+
     $GetPost = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 	$valor = $GetPost['valor'];
 	$obsevacoes = $GetPost['message'];
-	
+
 	if (isset($_GET['tmpId'])){
         $tmpId = $_GET['tmpId'];
         $investimento_query = "SELECT  nome_plantacao, nome_agricultor, total_arrecadado, numero_investidores FROM investimento where id = $tmpId";
@@ -136,7 +136,7 @@ Investir na plantação $nome_plantacao, do agricultor $nome_agricultor que já 
         $tmpId = null;
     }
 
-	
+
 
 	$assunto = "Investimento";
 	$data      = date("d/m/y"); // função para pegar a data de envio do e-mail
@@ -144,7 +144,7 @@ Investir na plantação $nome_plantacao, do agricultor $nome_agricultor que já 
 	$message = "
 
 INFORMAÇÕES DO INVESTIMENTO
- 
+
 ID:  $tmpId
 Plantação:	$nome_plantacao
 Nome Agricultor:	$nome_agricultor
@@ -154,7 +154,7 @@ Numero Investidores:	$numero_investidores
 
 Enviado: 	$data
 Valor desejado: 	$valor
-Observaçoes: 	$obsevacoes 
+Observaçoes: 	$obsevacoes
 Investir na plantação $nome_plantacao, do agricultor $nome_agricultor que já possui R$ $total_arrecadado
 
 Ficamos no aguardo do investimento";
