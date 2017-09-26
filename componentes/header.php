@@ -88,7 +88,7 @@
                         <a href=""><span class="social-header"><i class="fa fa-twitter"></i></span></a>
                         <a href="" class="social-last" ><span class="social-header"><i class="fa fa-skype"></i></span></a>
                         <a href="login.php"><span class="txt-message btn-login"><i class="fa fa-user"></i> Login</span></a>
-                        <a href="logout.php"><span class="txt-message btn-logout"><i class="fa fa-user"></i> Logout</span></a>
+                        <a href="logout.php"><span class="txt-message btn-logout"><i class="fa fa-sign-out"></i> Logout</span></a>
                         <a href="perfilUsuario.php"><span class="txt-message btn-perfil"><i class="fa fa-user"></i> Perfil</span></a>
                         <a href="login.php"><span class="txt-message btn-cadastro">Cadastro</span></a>
                         <div class="clear"></div>
