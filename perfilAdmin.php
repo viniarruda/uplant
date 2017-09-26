@@ -210,9 +210,9 @@
                         <img src="content/images/ex/th-90x90-1.jpg" alt="$USER_NAME"/>
                     </a>
                     <div class="media-body">
-                        <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b"><?php $nome_usuario ?></a></h4>
-                        <p class="rs">Chicago, IL</p>
-                        <p class="rs fc-gray">5 projects</p>
+                        <h4 class="rs pb10"><a href="#" class="be-fc-orange fw-b">Admin</a></h4>
+                        <p class="rs">São Paulo, SP</p>
+                        <p class="rs fc-gray">3 projetos</p>
                     </div>
                 </div>
                 <div class="author-action">

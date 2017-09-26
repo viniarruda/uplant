@@ -27,6 +27,7 @@ var CACHE_NAME = 'uplant-v1';
 //   )
 // });
 
+// Atualizo o cache, para v1, v2, etc
 self.addEventListener('activate', function activator(event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
@@ -42,6 +43,7 @@ self.addEventListener('activate', function activator(event) {
   );
 });
 
+// Pego o que for solicitado do cache, e se ele não existir, faço um request
 self.addEventListener('fetch', function (event) {
   event.respondWith(
     caches.match(event.request).then(function (cachedResponse) {
