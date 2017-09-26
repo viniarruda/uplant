@@ -16,10 +16,6 @@
     <meta property="og:title" content="Investimento agrículo crowdfunding">
     <meta property="og:site_name" content="Uplant">
     <meta property="og:description" content="Se você é uma Pessoa Física e quer investir de modo seguro, rápido e prático, esse é o lugar ideal para você.">
-    <meta property="og:image" content="content/images/image-share.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="171">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/jquery.sidr.light.css"/>
