@@ -131,7 +131,7 @@
                                   if ($counta == 0) {
                                     echo "Nenhum investimento encontrado";
                                   }else{
-                                  $projetos = 0;
+
                                   while ($fetchAplicacao = mysqli_fetch_array($resultadoAplicacao)){
 
                                     $dataAplicacao = $fetchAplicacao[0];
@@ -143,10 +143,6 @@
                                               or die (mysqli_error());
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
-
-                                    $qtdProjetos[$pjtos] = $fetchAplicacao['pjtos'];
-                                    $pjtos++;
-
                                 ?>
                                 <div class="list-last-post">
                                         <div class="media other-post-item">
@@ -180,5 +176,5 @@
         <div class="clear"></div>
     </div>
 <?php }
-?>  <?php var_dump($qtdProjetos); ?>
+?>
 <?php include "componentes/footer.php";?>
