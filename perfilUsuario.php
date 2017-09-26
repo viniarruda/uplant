@@ -180,5 +180,5 @@
         <div class="clear"></div>
     </div>
 <?php }
-?>
+?>  <?php var_dump($qtdProjetos); ?>
 <?php include "componentes/footer.php";?>
