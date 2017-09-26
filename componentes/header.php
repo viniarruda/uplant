@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/md-slider.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/novo.css"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="152x122" href="content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png">

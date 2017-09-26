@@ -1,0 +1,169 @@
+#header .txt-message {
+  margin: 0 0 0 10px;
+}
+#header .txt-message.btn-login {
+    color: #fff;
+    border: 2px solid #92999d;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #92999d;
+}
+#header .txt-message.btn-cadastro {
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background: #5bb327;
+
+}
+#header .txt-message.btn-cadastro:hover {
+  background: #4ba220;
+}
+#header .txt-message.btn-login:hover {
+  background-color: #fff;
+  color: #92999d;
+  border-color: #3e4b51;
+}
+#sobre {
+  background: #f0f0f0;
+  padding: 50px 0;
+  display: block;
+}
+#sobre h1 {
+  text-align: center;
+}
+#sobre .grid_sobre {
+  text-align: center;
+}
+#sobre .icon_sobre {
+  border: 8px solid #006600;
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 100px;
+  padding: 50px;
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  position: relative;
+  background-color: #00b200;
+}
+#sobre .icon_sobre:hover {
+  top: -10px;
+}
+#sobre .icon_sobre .fa {
+  font-size: 45px;
+  color: #006600;
+}
+#sobre .icon_sobre .fa-money {
+  color: green;
+}
+span.social-header {
+  color: #92999d;
+  margin: 0 0 0 10px;
+}
+span.social-header:hover {
+  color: #fff;
+}
+.social-last {
+  margin-right: 25px;
+}
+.fa-menu-top {
+  margin-right: 3px;
+}
+#footer .site-copyright span {
+  margin-right: 25px;
+}
+.container-login {
+  background-color: #f0f0f0;
+  padding-top: 45px;
+}
+.login-form {
+  width: 360px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ok {
+  text-align: center;
+  color: #ff0000;
+}
+#header span.txt-message.btn-perfil {
+  display: none;
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3CB371;
+}
+#header span.txt-message.btn-perfil:hover {
+  background-color:#4ba220;
+}
+.title-equipe {
+  font-size: 22px;
+  font-weight: bold;
+}
+.card-equipe {
+  width: 180px;
+  display: inline-block;
+  margin: 5px;
+}
+.card-equipe img {
+  border-radius: 100%;
+  border: 2px solid #3CB371;
+}
+.card-equipe p {
+  text-align: center;
+}
+#header span.txt-message.btn-perfil, #header span.txt-message.btn-logout {
+  display: none;
+  color: #fff;
+  border: 2px solid #92999d;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3CB371;
+}
+#header span.txt-message.btn-perfil:hover {
+  background-color:#4ba220;
+}
+#header span.txt-message.btn-logout {
+  background-color: red;
+}
+.site-copyright {
+  margin-right: 15px; 
+}
+
+@media (max-width: 600px){ 
+   #home-slider p{
+        font-size: 10px;
+    }
+    #frame{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-device-width:  979px), screen and (max-width:  979px) {
+  #header .top-message {
+    display: block!important;
+    margin-top: 8px;
+  }
+  #logo {
+    padding: 10px 0 0 0!important;
+  }
+  .grid_6_mobile {
+    width: 100%;
+  }
+  .wrapper-box.equipe-box {
+    text-align: center;
+  }
+  .wrapper-box .card-equipe {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .header-content .header-left {
+    display: none;
+  }
+  .project-short.sml-thumb .group-fee .fee-item:first-child{
+    margin-left: -15px;
+  }
+}
+
