@@ -96,7 +96,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                                                <!-- <p class="rs fc-gray pb10"></p> -->
+                                                <p class="rs fc-gray pb10"><?php print_r($qtdProjetos); ?></p>
                                                 <div class="legenda_perfil">
                                                   <p class="rs telefone"><b>Data Nascimento:</b> <?php echo $DataNascimento_usuario; ?>    </p>
                                                   <p class="rs legenda"><b>CPF:</b> <?php echo $CPF_usuario; ?></p>
@@ -131,7 +131,7 @@
                                   if ($counta == 0) {
                                     echo "Nenhum investimento encontrado";
                                   }else{
-
+                                  $projetos = 0;
                                   while ($fetchAplicacao = mysqli_fetch_array($resultadoAplicacao)){
 
                                     $dataAplicacao = $fetchAplicacao[0];
@@ -143,6 +143,9 @@
                                               or die (mysqli_error());
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
+
+                                    $qtdProjetos[$projetos] = $fe['projetos'];
+                                    $projetos++;
 
                                 ?>
                                 <div class="list-last-post">
