@@ -9,8 +9,13 @@
     }
     else{
 
-    while ($fetch = mysqli_fetch_array($resultado_query)){
+    $count = 0;
 
+    while ($count < 3){
+
+        $count ++;
+
+        $fetch = mysqli_fetch_array($resultado_query);
         $id_investimento = $fetch[0];
         $nome_plantacao = $fetch[1];
         $nome_agricultor = $fetch[2];
