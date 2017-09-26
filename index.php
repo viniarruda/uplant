@@ -42,11 +42,11 @@
                     <h5>Ficou curioso?</h5>
                 </div>
                 <div class="md-object rs slide-description2" data-x="20" data-y="150" data-width="390" data-height="100" data-start="1400" data-stop="9500" data-easein="random" data-easeout="random">
-                    <p>Invista sem custos e burocracia - A plataforma funciona 100% online sem nenhumataxa para o investidor.</p>
+                    <p>Invista sem custos e burocracia - A plataforma funciona 100% online sem nenhuma taxa para o investidor.</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div><!--end: #home-slider -->
 <div class="home-popular-project" style="margin: 40px 0px  40px 0px">
@@ -96,7 +96,7 @@
                                 <h3 class="rs acticle-title">Crie seu projeto</h3>
                                 <p class="rs tiny-desc">por Você!</p>
                                 <p class="rs title-description">Projete seu plantio! Informe a localização, o retorno do investimento e o tempo de retorno! </p>
-                                
+
                             </div>
                         </div>
                     </div>

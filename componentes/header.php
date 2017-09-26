@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#005297">
-    <meta name="apple-mobile-web-app-title" content="Uplant - Investimento agrículo crowdfunding">
+    <meta name="apple-mobile-web-app-title" content="Uplant - Investimento agrícula crowdfunding">
     <link rel="apple-touch-icon"  sizes="152x152" href="content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png">
     <meta name="msapplication-TileImage" content="content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png">
     <meta name="msapplication-TileColor" content="#9ec25e">
     <meta name="theme-color" content="#9ec25e">
     <meta property="og:url" content="https://www.uplant.com.br">
-    <meta property="og:title" content="Investimento agrículo crowdfunding">
+    <meta property="og:title" content="Investimento agrícula crowdfunding">
     <meta property="og:site_name" content="Uplant">
     <meta property="og:description" content="Se você é uma Pessoa Física e quer investir de modo seguro, rápido e prático, esse é o lugar ideal para você.">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
