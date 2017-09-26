@@ -96,7 +96,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                                                <p class="rs fc-gray pb10"><?php echo $qtdProjetos; ?></p>
+                                                <!-- <p class="rs fc-gray pb10"></p> -->
                                                 <div class="legenda_perfil">
                                                   <p class="rs telefone"><b>Data Nascimento:</b> <?php echo $DataNascimento_usuario; ?>    </p>
                                                   <p class="rs legenda"><b>CPF:</b> <?php echo $CPF_usuario; ?></p>
@@ -144,9 +144,6 @@
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
 
-                                    $projetos++;
-
-
                                 ?>
                                 <div class="list-last-post">
                                         <div class="media other-post-item">
@@ -180,5 +177,5 @@
         <div class="clear"></div>
     </div>
 <?php }
-?>  <?php $qtdProjetos = $projetos; ?>
+?>
 <?php include "componentes/footer.php";?>
