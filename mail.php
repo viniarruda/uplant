@@ -21,7 +21,7 @@ $message = "Nome: $nome <br />
 			Navegador:  $navegador";
 $email_remetente = "contato@uplant.com.br";
 $headers = "MIME-Version: 1.1";
-$headers .= "Content-type: text/html; charset=iso-8859-1";
+$headers .= "Content-type: text/html; charset=utf-8";
 $headers .= "From: $email_remetente"; // remetente
 $headers .= "Return-Path: $email_remetente"; // return-path
 $headers .= "Reply-To: $email"; // Endereço (devidamente validado) que o seu usuário informou no contato
