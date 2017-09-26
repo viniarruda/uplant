@@ -144,8 +144,8 @@
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
 
-                                    $qtdProjetos[$projetos] = $fetchAplicacao['projetos'];
-                                    $projetos++;
+                                    $qtdProjetos[$pjtos] = $fetchAplicacao['pjtos'];
+                                    $pjtos++;
 
                                 ?>
                                 <div class="list-last-post">
