@@ -96,7 +96,7 @@
                                                 </div>
                                                 <div class="clear"></div>
                                                 <p class="rs"><?php echo $Cidade_usuario; ?></p>
-                                                <p class="rs fc-gray pb10"><?php echo $nome_plantacao = $fe[0]; ?></p>
+                                                <p class="rs fc-gray pb10"><?php echo $qtdProjetos; ?></p>
                                                 <div class="legenda_perfil">
                                                   <p class="rs telefone"><b>Data Nascimento:</b> <?php echo $DataNascimento_usuario; ?>    </p>
                                                   <p class="rs legenda"><b>CPF:</b> <?php echo $CPF_usuario; ?></p>
@@ -144,6 +144,7 @@
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
 
+                                    $qtdProjetos++;
 
 
                                 ?>
