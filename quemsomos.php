@@ -21,22 +21,22 @@
                          <p class="rs pb30">Através do UPLANT, investidores podem participar de empreendimentos agerícolas de pequenos e médios produtores rurais previamente selecionados. A partir de R$1 mil, o investidor pode adquirir uma quota da produção, de forma 100% digital, sem burocracia e com alto potencial de retorno.</p>
                          <p class="rs pb30">Nós do UPLANT acreditamos que nenhum portfolio de investimentos está completo enquanto não possuir uma parcela alocada no segmento agrícola, e temos orgulho em oferecer um forma simplificada e rentável de investir neste mercado.</p>
                 </div>
-                <div class="wrapper-box">
+                <div class="wrapper-box equipe-box">
                     <h1 class="title-equipe">Nossa equipe</h1>
                     <div class="card-equipe">
-                        <img src="content/images/equipe/vinicius.jpg">
+                        <img src="content/images/equipe/gabriel.jpg">
                         <p>Gabriel Souza</p>
                     </div>
                     <div class="card-equipe">
-                        <img src="content/images/equipe/vinicius.jpg">
+                        <img src="content/images/equipe/guilherme.jpg">
                         <p>Guilherme Souza</p>
                     </div>
                     <div class="card-equipe">
-                        <img src="content/images/equipe/vinicius.jpg">
+                        <img src="content/images/equipe/gustavo.jpg">
                         <p>Gustavo Oshiro</p>
                     </div>
                     <div class="card-equipe">
-                        <img src="content/images/equipe/vinicius.jpg">
+                        <img src="content/images/equipe/leonardo.jpg">
                         <p>Leonardo Ferreira</p>
                     </div>
                     <div class="card-equipe">

@@ -62,11 +62,11 @@
             <div class="clear"></div>
         </div>
 </div>
-<div class="home-feature-category">
+<div class="home-feature-category" style="box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;">
     <div class="container_12 clearfix">
         <div class="grid_12 marked-category">
             <div class="wrap-title clearfix">
-                <h2 class="title-mark rs">Nosso Empresa</h2>
+                <h2 class="title-mark rs">Nossa Empresa</h2>
             </div>
             <div class="clear"></div>
             <center>

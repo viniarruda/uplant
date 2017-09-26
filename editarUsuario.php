@@ -5,10 +5,16 @@
 
 	
         if( !isset($_SESSION["email"]) || !isset($_SESSION["passwordLogin"]) ) {
+            ?> <script> $('.btn-login').css('display', 'initial');</script> <?php
             header("Location: login.php");
             exit;
         } else {
-
+        	?> <script>
+		       $('.btn-login').css('display', 'none');
+		       $('.btn-cadastro').css('display', 'none');
+		       $('.btn-perfil').css('display', 'initial');
+		       $('.btn-logout').css('display', 'initial');
+		    </script> <?php
       $mail = $_SESSION["email"];
 
 

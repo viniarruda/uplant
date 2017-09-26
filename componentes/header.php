@@ -18,10 +18,7 @@
     <link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/md-slider.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/equipe.css"/>
-    <link rel="stylesheet" href="css/menuresponsivo.css"/>
-    <link rel="stylesheet" type="text/css" href="teste.css">
+    <link rel="stylesheet" href="css/site.css"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="152x122" href="content/images/48d2b70d-eb8f-237e-c1c2-cd91e8facbcc.webPlatform.png">
@@ -53,13 +50,11 @@
                 <div class="grid_12">
                     <nav class="top-menu">
                         <ul id="main-menu" class="nav nav-horizontal clearfix">
-                            <li class="active"><a href="index.php"><i class="fa fa-home fa-menu-top"></i> Home</a></li>
+                            <li class="btn-home"><a href="index.php"><i class="fa fa-home fa-menu-top"></i> Home</a></li>
                             <li class="sep"></li>
-                            <li><a href="quemsomos.php"><i class="fa fa-info fa-menu-top"></i> Sobre</a></li>
+                            <li class="btn-sobre"><a href="quemsomos.php"><i class="fa fa-info fa-menu-top"></i> Sobre</a></li>
                             <li class="sep"></li>
-                            <li><a href="contato.php"><i class="fa fa-question fa-menu-top"></i> Ajuda</a></li>
-                            <li class="sep"></li>
-                            <li><a href="contato.php"><i class="fa fa-envelope fa-menu-top"></i> Contato</a></li>
+                            <li class="btn-contato"><a href="contato.php"><i class="fa fa-envelope fa-menu-top"></i> Contato</a></li>
                         </ul>
                         <a id="btn-toogle-menu" class="btn-toogle-menu" href="#alternate-menu">
                             <span class="line-bar"></span>
@@ -70,6 +65,7 @@
                             <ul class="alternate-menu">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="investimentos.php">Investir</a></li>
+                                <li><a href="quemsomos.php">Sobre</a></li>
                                 <li><a href="contato.php">Contato</a></li>
                             </ul>
                         </div>
@@ -91,7 +87,7 @@
             <div class="grid_12 header-content">
                 <div id="sys_header_right" class="header-right">
                     <!-- <div class="account-panel"> -->
-                      <a href="enviarInvestimento.php" class="btn btn-red">Criar investimento!</a>
+                      <a href="enviarInvestimento.php" class="btn btn-green">Criar investimento!</a>
                     <!-- </div> -->
                 </div>
                 <h1 id="logo">

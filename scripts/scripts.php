@@ -12,6 +12,6 @@
 <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
 <script type="text/javascript" src="js/pie.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/scripts-novos.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
 <script type="text/javascript" src="js/validacaoEnviarInvestimento.js"></script>
 <script type="text/javascript" src="js/validacaoRequerirInvestimento.js"></script>

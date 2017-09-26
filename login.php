@@ -2,7 +2,7 @@
 
 <div class="container-login">
     <div class="container_12 clearfix">
-        <div class="grid_6">
+        <div class="grid_6 grid_6_mobile">
             <div class="form login-form">
               <?php if(isset($_POST['cadastro']) && $_POST['cadastro'] == 'ok') {
 
@@ -48,11 +48,10 @@
                                 </div>
                                 <div class="col">
                                     <label for="txt_password">
-                                        <input id="txt_password" name="password" class="txt fill-width" type="password" required placeholder="Enter password"/>
+                                        <input id="txt_password" name="password" class="txt fill-width" type="password" required placeholder="Entre com sua senha"/>
                                     </label>
                                 </div>
                             </div>
-                            <p class="rs pb10">By signing up, you agree to our <a href="#" class="fc-orange">terms of use</a> and <a href="#" class="fc-orange">privacy policy</a>.</p>
                             <p class="rs ta-c">
                                 <input type="hidden" name="cadastro" value="ok"/>
                                 <input type="submit" name="Cadastrar" value="Cadastrar" class="btn btn-red btn-submit"/>
@@ -63,7 +62,7 @@
             </div>
         </div>
         <div class="clear clear-2col"></div>
-        <div class="grid_6">
+        <div class="grid_6 grid_6_mobile">
             <div class="form login-form">
                 <form action="user-authentication.php" method="post" name="login_form">
                     <h3 class="rs title-form">Login</h3>
@@ -75,7 +74,7 @@
                                 <input id="email" class="txt fill-width" name="email" type="email" placeholder="Entre com seu email"/>
                             </label>
                             <label for="inputPassword">
-                                <input id="passwordLogin" class="txt fill-width" name="passwordLogin" type="password" placeholder="Enter password"/>
+                                <input id="passwordLogin" class="txt fill-width" name="passwordLogin" type="password" placeholder="Entre com sua senha"/>
                             </label>
                             <p class="rs ta-c pb10">
                                 <input type="submit" value="Entrar" class="btn btn-red btn-submit" />
