@@ -37,13 +37,13 @@ Descrição:		$detalhado
 Data:		$data
 Ip: 		$ip
 Navegador:  $navegador";
-	$email_remetente = "gustavoaoshiro@gmail.com";
+	$email_remetente = "vinny-arruda@hotmail.com";
 	$headers = "MIME-Version: 1.1";
 	$headers .= "Content-type: text/html; charset=iso-8859-1";
 	$headers .= "From: $email_remetente"; // remetente
 	$headers .= "Return-Path: $email_remetente"; // return-path
 	$headers .= "Reply-To: $email"; // Endereço (devidamente validado) que o seu usuário informou no contato
-	$envio = mail("gustavoaoshiro@gmail.com", $assunto, $message, $headers, "-f$email_remetente");
+	$envio = mail("vinny-arruda@hotmail.com", $assunto, $message, $headers, "-f$email_remetente");
 	echo "<META HTTP-EQUIV=REFRESH CONTENT= '0; URL=../../investir.php'>
 	<script type=\"text/javascript\">
 	alert(\"$Usuario, sua mensagem foi enviada com sucesso!\");
