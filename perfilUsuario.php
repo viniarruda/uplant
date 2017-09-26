@@ -144,7 +144,7 @@
                                     $fe = mysqli_fetch_array($count);
                                     $nome_plantacao = $fe[0];
 
-                                    $qtdProjetos++;
+                                    $projetos++;
 
 
                                 ?>
@@ -180,5 +180,5 @@
         <div class="clear"></div>
     </div>
 <?php }
-?>
+?>  <?php $qtdProjetos = $projetos; ?>
 <?php include "componentes/footer.php";?>
